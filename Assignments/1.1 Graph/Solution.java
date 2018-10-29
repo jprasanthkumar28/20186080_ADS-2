@@ -8,28 +8,28 @@ interface Graph {
      *
      * @return     { description_of_the_return_value }
      */
-    int V();
+    public int V();
     /**
      * Edge variable.
      *
      * @return     { description_of_the_return_value }
      */
-    int E();
+    public int E();
     /**
      * Adds an edge.
      *
      * @param      v     { parameter_description }
      * @param      w     { parameter_description }
      */
-    void addEdge(int v, int w);
+    public void addEdge(int v, int w);
     /**
-     * { function_description }.
+     * { function_description }
      *
      * @param      v     { parameter_description }
      *
      * @return     { description_of_the_return_value }
      */
-    Iterable<Integer> adj(int v);
+    public Iterable<Integer> adj(int v);
     /**
      * Determines if it has edge.
      *
@@ -38,7 +38,7 @@ interface Graph {
      *
      * @return     True if has edge, False otherwise.
      */
-    boolean hasEdge(int v, int w);
+    public boolean hasEdge(int v, int w);
 }
 /**
  * Class for graph adt.
@@ -47,11 +47,11 @@ class GraphADT implements Graph {
     /**
      * for vertices.
      */
-    private int v;
+    private int V;
     /**
      * fir edges.
      */
-    private int e;
+    private int E;
     /**
      * for bag.
      */
@@ -65,13 +65,13 @@ class GraphADT implements Graph {
     /**
      * Constructs the object.
      *
-     * @param      v1     { parameter_description }
+     * @param      V     { parameter_description }
      */
-    GraphADT(final int v1) {
-        this.v = v1;
-        this.e = 0;
-        adj = (Bag<Integer>[]) new Bag[v];
-        for (int v = 0; v < v; v++) {
+    public GraphADT(int V) {
+        this.V = V;
+        this.E = 0;
+        adj = (Bag<Integer>[]) new Bag[V];
+        for (int v = 0; v < V; v++) {
             adj[v] = new Bag<Integer>();
         }
     }
@@ -81,7 +81,7 @@ class GraphADT implements Graph {
      * @return the number of edges in this graph
      */
     public int V() {
-        return v;
+        return V;
     }
 
     /**
@@ -90,7 +90,7 @@ class GraphADT implements Graph {
      * @return the number of edges in this graph
      */
     public int E() {
-        return e;
+        return E;
     }
     /**
      * Adds an edge.
@@ -102,15 +102,15 @@ class GraphADT implements Graph {
         if (v == w) {
             return;
         }
-        if (!hasEdge(v, w)) {
-            e++;
+        if (!hasEdge(v,w)) {
+            E++;
             
         }
         adj[v].add(w);
         adj[w].add(v);
     }
     /**
-     * { function_description }.
+     * { function_description }
      *
      * @param      v     { parameter_description }
      *
@@ -128,7 +128,7 @@ class GraphADT implements Graph {
      * @return     True if has edge, False otherwise.
      */
     public boolean hasEdge(final int v, final int w) {
-        for (int k : adj[v]) {
+        for(int k : adj[v]) {
                 if (k == w) {
                     return true;
                 }
@@ -144,8 +144,7 @@ class GraphADT implements Graph {
      *
      * @throws     Exception  { exception_description }
      */
-    public void listdisplay(final int v2, final int e2,
-        final String[] tokens) throws Exception {
+    public void listdisplay(final int v2, final int e2, final String[] tokens) throws Exception {
         if (e2 <= 1 && v2 <= 1) {
             System.out.println(V() + " vertices" + ", " + E() + " edges");
             throw new Exception("No edges");
@@ -176,17 +175,17 @@ class GraphADT implements Graph {
             throw new Exception("No edges");
         } else {
             System.out.println(V() + " vertices" + ", " + E() + " edges");
-            int[][] disp = new int[v][v];
-            for (int i = 0; i  < v; i++) {
-                for (int j = 0; j < v; j++) {
+            int[][] disp = new int[V][V];
+            for (int i = 0; i  < V; i++) {
+                for (int j = 0; j < V; j++) {
                     if (hasEdge(i, j)) {
                         disp[i][j] = 1;
                     }
                 }
             }
 
-            for (int i = 0; i < v; i++) {
-                for (int j = 0; j < v; j++) {
+            for (int i = 0; i < V; i++) {
+                for (int j = 0; j < V; j++) {
                     System.out.print(disp[i][j] + " ");
                 }
                 System.out.println();
