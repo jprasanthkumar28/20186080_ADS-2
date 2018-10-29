@@ -99,7 +99,7 @@ class GraphADT implements Graph {
      * @param      v     { parameter_description }
      * @param      w     { parameter_description }
      */
-    public void addEdge(int v, int w) {
+    public void addEdge(final int v, final int w) {
     	if (v == w) {
         	return;
         }
@@ -117,7 +117,7 @@ class GraphADT implements Graph {
      *
      * @return     { description_of_the_return_value }
      */
-    public Iterable<Integer> adj(int v) {
+    public Iterable<Integer> adj(final int v) {
         return adj[v];
     }
 	/**
@@ -128,9 +128,9 @@ class GraphADT implements Graph {
 	 *
 	 * @return     True if has edge, False otherwise.
 	 */
-	public boolean hasEdge(int v, int w) {
+	public boolean hasEdge(final int v, final int w) {
 		for(int k : adj[v]) {
-				if (k==w) {
+				if (k == w) {
 					return true;
 				}
 		}
@@ -139,14 +139,14 @@ class GraphADT implements Graph {
     /**.
      * To display the list.
      *
-     * @param      V          { parameter_description }
-     * @param      E          { parameter_description }
+     * @param      v2          { parameter_description }
+     * @param      e2          { parameter_description }
      * @param      tokens     The tokens
      *
      * @throws     Exception  { exception_description }
      */
-    public void listdisplay(int V, int E, String[] tokens) throws Exception {
-    	if (E <= 1 && V <= 1) {
+    public void listdisplay(final int v2, final int e2, final String[] tokens) throws Exception {
+    	if (e2 < 1 && v2 < 1) {
     		System.out.println(V() + " vertices" + ", " + E() + " edges");
     		throw new Exception("No edges");
     	} else {
@@ -165,13 +165,13 @@ class GraphADT implements Graph {
     /**
      * to display the matrix.
      *
-     * @param      V          { parameter_description }
-     * @param      E1          { parameter_description }
+     * @param      v1          { parameter_description }
+     * @param      e1          { parameter_description }
      *
      * @throws     Exception  { exception_description }
      */
-    public void matrixdisplay(int V, int E1) throws Exception {
-    	if (E1 <= 1 && V <= 1) {
+    public void matrixdisplay(final int v1, final int e1) throws Exception {
+    	if (e1 < 1 && v1 < 1) {
     		System.out.println(V() + " vertices" + ", " + E() + " edges");
     		throw new Exception("No edges");
     	} else {
