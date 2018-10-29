@@ -8,28 +8,28 @@ interface Graph {
      *
      * @return     { description_of_the_return_value }
      */
-    public int v();
+    int v();
     /**
      * Edge variable.
      *
      * @return     { description_of_the_return_value }
      */
-    public int e();
+    int e();
     /**
      * Adds an edge.
      *
      * @param      v     { parameter_description }
      * @param      w     { parameter_description }
      */
-    public void addEdge(int v, int w);
+    void addEdge(int v, int w);
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      v     { parameter_description }
      *
      * @return     { description_of_the_return_value }
      */
-    public Iterable<Integer> adj(int v);
+    Iterable<Integer> adj(int v);
     /**
      * Determines if it has edge.
      *
@@ -38,7 +38,7 @@ interface Graph {
      *
      * @return     True if has edge, False otherwise.
      */
-    public boolean hasEdge(int v, int w);
+    boolean hasEdge(int v, int w);
 }
 /**
  * Class for graph adt.
@@ -47,11 +47,11 @@ class GraphADT implements Graph {
     /**
      * for vertices.
      */
-    private int V;
+    private int ver;
     /**
      * fir edges.
      */
-    private int E;
+    private int ed;
     /**
      * for bag.
      */
@@ -65,14 +65,14 @@ class GraphADT implements Graph {
     /**
      * Constructs the object.
      *
-     * @param      V     { parameter_description }
+     * @param      ver     { parameter_description }
      */
-    public GraphADT(int V) {
-        this.V = V;
-        this.E = 0;
-        adj = (Bag<Integer>[]) new Bag[V];
-        for (int v = 0; v < V; v++) {
-            adj[v] = new Bag<Integer>();
+    public GraphADT(int v) {
+        this.ver = v;
+        this.ed = 0;
+        adj = (Bag<Integer>[]) new Bag[ver];
+        for (int i = 0; i < ver; i++) {
+            adj[i] = new Bag<Integer>();
         }
     }
     /**
@@ -81,7 +81,7 @@ class GraphADT implements Graph {
      * @return the number of edges in this graph
      */
     public int v() {
-        return V;
+        return ver;
     }
 
     /**
@@ -90,7 +90,7 @@ class GraphADT implements Graph {
      * @return the number of edges in this graph
      */
     public int e() {
-        return E;
+        return ed;
     }
     /**
      * Adds an edge.
@@ -103,7 +103,7 @@ class GraphADT implements Graph {
             return;
         }
         if (!hasEdge(v, w)) {
-            E++;
+            ed++;
         }
         adj[v].add(w);
         adj[w].add(v);
@@ -175,17 +175,17 @@ class GraphADT implements Graph {
             throw new Exception("No edges");
         } else {
             System.out.println(v() + " vertices" + ", " + e() + " edges");
-            int[][] disp = new int[V][V];
-            for (int i = 0; i  < V; i++) {
-                for (int j = 0; j < V; j++) {
+            int[][] disp = new int[ver][ver];
+            for (int i = 0; i  < ver; i++) {
+                for (int j = 0; j < ver; j++) {
                     if (hasEdge(i, j)) {
                         disp[i][j] = 1;
                     }
                 }
             }
 
-            for (int i = 0; i < V; i++) {
-                for (int j = 0; j < V; j++) {
+            for (int i = 0; i < ver; i++) {
+                for (int j = 0; j < ver; j++) {
                     System.out.print(disp[i][j] + " ");
                 }
                 System.out.println();
