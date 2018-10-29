@@ -4,19 +4,62 @@ import java.util.Arrays;
  * Interface for graph.
  */
 interface Graph {
+	/**
+	 * Vertices variable.
+	 *
+	 * @return     { description_of_the_return_value }
+	 */
     public int V();
+    /**
+     * Edge variable.
+     *
+     * @return     { description_of_the_return_value }
+     */
     public int E();
+    /**
+     * Adds an edge.
+     *
+     * @param      v     { parameter_description }
+     * @param      w     { parameter_description }
+     */
     public void addEdge(int v, int w);
+    /**
+     * { function_description }
+     *
+     * @param      v     { parameter_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
     public Iterable<Integer> adj(int v);
+    /**
+     * Determines if it has edge.
+     *
+     * @param      v     { parameter_description }
+     * @param      w     { parameter_description }
+     *
+     * @return     True if has edge, False otherwise.
+     */
     public boolean hasEdge(int v, int w);
 }
 /**
  * Class for graph adt.
  */
 class GraphADT implements Graph {
+	/**
+	 * for vertices.
+	 */
 	private int V;
+	/**
+	 * fir edges.
+	 */
     private int E;
+    /**
+     * for bag.
+     */
     private Bag<Integer>[] adj;
+    /**
+     * Constructs the object.
+     */
     protected GraphADT() {
 
     }
@@ -50,6 +93,12 @@ class GraphADT implements Graph {
     public int E() {
         return E;
     }
+    /**
+     * Adds an edge.
+     *
+     * @param      v     { parameter_description }
+     * @param      w     { parameter_description }
+     */
     public void addEdge(int v, int w) {
     	if (v == w) {
         	return;
@@ -61,9 +110,24 @@ class GraphADT implements Graph {
         adj[v].add(w);
         adj[w].add(v);
     }
+    /**
+     * { function_description }
+     *
+     * @param      v     { parameter_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
     public Iterable<Integer> adj(int v) {
         return adj[v];
     }
+	/**
+	 * Determines if it has edge.
+	 *
+	 * @param      v     { parameter_description }
+	 * @param      w     { parameter_description }
+	 *
+	 * @return     True if has edge, False otherwise.
+	 */
 	public boolean hasEdge(int v, int w) {
 		for(int k : adj[v]) {
 				if (k==w) {
@@ -72,6 +136,15 @@ class GraphADT implements Graph {
 		}
 		return false;
     }
+    /**
+     * { function_description }
+     *
+     * @param      V          { parameter_description }
+     * @param      E          { parameter_description }
+     * @param      tokens     The tokens
+     *
+     * @throws     Exception  { exception_description }
+     */
     public void listdisplay(int V, int E, String[] tokens) throws Exception {
     	if (E <= 1 && V <= 1) {
     		System.out.println(V() + " vertices" + ", " + E() + " edges");
@@ -89,6 +162,14 @@ class GraphADT implements Graph {
     	}
     }
 
+    /**
+     * { function_description }
+     *
+     * @param      V          { parameter_description }
+     * @param      E          { parameter_description }
+     *
+     * @throws     Exception  { exception_description }
+     */
     public void matrixdisplay(int V, int E) throws Exception {
     	if (E <= 1 && V <= 1) {
     		System.out.println(V() + " vertices" + ", " + E() + " edges");
@@ -114,11 +195,21 @@ class GraphADT implements Graph {
     	}
     }
 }
-
+/**
+ * { item_description }
+ */
 public final class Solution {
+	/**
+	 * Constructs the object.
+	 */
 	protected Solution() {
 		//Empty Constructer.
 	}
+	/**
+	 * Client function.
+	 *
+	 * @param      args  The arguments
+	 */
 	public static void main(final String[] args) {
 		Scanner scan = new Scanner(System.in);
 		GraphADT graph = new GraphADT();
