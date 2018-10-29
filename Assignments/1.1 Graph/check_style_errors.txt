@@ -11,9 +11,5 @@ Audit done.
 Checkstyle ends with 8 errors.
 Starting audit...
 [ERROR] M:\ADS-2\Assignments\1.1 Graph\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] M:\ADS-2\Assignments\1.1 Graph\Solution.java:68:8: Unused @param tag for 'ver'. [JavadocMethod]
-[ERROR] M:\ADS-2\Assignments\1.1 Graph\Solution.java:70:5: Redundant 'public' modifier. [RedundantModifier]
-[ERROR] M:\ADS-2\Assignments\1.1 Graph\Solution.java:70:21: Parameter v should be final. [FinalParameters]
-[ERROR] M:\ADS-2\Assignments\1.1 Graph\Solution.java:70:25: Expected @param tag for 'v'. [JavadocMethod]
 Audit done.
-Checkstyle ends with 5 errors.
+Checkstyle ends with 1 errors.

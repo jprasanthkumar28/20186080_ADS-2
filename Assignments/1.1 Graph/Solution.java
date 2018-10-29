@@ -65,9 +65,9 @@ class GraphADT implements Graph {
     /**
      * Constructs the object.
      *
-     * @param      ver     { parameter_description }
+     * @param      v     { parameter_description }
      */
-    public GraphADT(int v) {
+    GraphADT(final int v) {
         this.ver = v;
         this.ed = 0;
         adj = (Bag<Integer>[]) new Bag[ver];
