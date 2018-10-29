@@ -1,5 +1,8 @@
 import java.util.Scanner;
 import java.util.Arrays;
+/**
+ * Interface for graph.
+ */
 interface Graph {
     public int V();
     public int E();
@@ -7,6 +10,9 @@ interface Graph {
     public Iterable<Integer> adj(int v);
     public boolean hasEdge(int v, int w);
 }
+/**
+ * Class for graph adt.
+ */
 class GraphADT implements Graph {
 	private int V;
     private int E;
@@ -14,6 +20,11 @@ class GraphADT implements Graph {
     protected GraphADT() {
 
     }
+    /**
+     * Constructs the object.
+     *
+     * @param      V     { parameter_description }
+     */
     public GraphADT(int V) {
         this.V = V;
         this.E = 0;
@@ -40,7 +51,13 @@ class GraphADT implements Graph {
         return E;
     }
     public void addEdge(int v, int w) {
-        E++;
+    	if (v == w) {
+        	return;
+        }
+		if (!hasEdge(v,w)) {
+            E++;
+            
+        }
         adj[v].add(w);
         adj[w].add(v);
     }
