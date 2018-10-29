@@ -8,13 +8,13 @@ interface Graph {
      *
      * @return     { description_of_the_return_value }
      */
-    public int V();
+    public int v();
     /**
      * Edge variable.
      *
      * @return     { description_of_the_return_value }
      */
-    public int E();
+    public int e();
     /**
      * Adds an edge.
      *
@@ -80,7 +80,7 @@ class GraphADT implements Graph {
      *
      * @return the number of edges in this graph
      */
-    public int V() {
+    public int v() {
         return V;
     }
 
@@ -89,7 +89,7 @@ class GraphADT implements Graph {
      *
      * @return the number of edges in this graph
      */
-    public int E() {
+    public int e() {
         return E;
     }
     /**
@@ -102,14 +102,13 @@ class GraphADT implements Graph {
         if (v == w) {
             return;
         }
-        if (!hasEdge(v,w)) {
+        if (!hasEdge(v, w)) {
             E++;
-            
         }
         adj[v].add(w);
         adj[w].add(v);
     }
-    /**
+    /**.
      * { function_description }
      *
      * @param      v     { parameter_description }
@@ -128,7 +127,7 @@ class GraphADT implements Graph {
      * @return     True if has edge, False otherwise.
      */
     public boolean hasEdge(final int v, final int w) {
-        for(int k : adj[v]) {
+        for (int k : adj[v]) {
                 if (k == w) {
                     return true;
                 }
@@ -144,12 +143,13 @@ class GraphADT implements Graph {
      *
      * @throws     Exception  { exception_description }
      */
-    public void listdisplay(final int v2, final int e2, final String[] tokens) throws Exception {
+    public void listdisplay(final int v2,
+        final int e2, final String[] tokens) throws Exception {
         if (e2 <= 1 && v2 <= 1) {
-            System.out.println(V() + " vertices" + ", " + E() + " edges");
+            System.out.println(v() + " vertices" + ", " + e() + " edges");
             throw new Exception("No edges");
         } else {
-            System.out.println(V() + " vertices" + ", " + E() + " edges");
+            System.out.println(v() + " vertices" + ", " + e() + " edges");
             for (int i = 0; i < tokens.length; i++) {
             String str = "";
             str = tokens[i] + ": ";
@@ -171,10 +171,10 @@ class GraphADT implements Graph {
      */
     public void matrixdisplay(final int v1, final int e1) throws Exception {
         if (e1 <= 1 && v1 <= 1) {
-            System.out.println(V() + " vertices" + ", " + E() + " edges");
+            System.out.println(v() + " vertices" + ", " + e() + " edges");
             throw new Exception("No edges");
         } else {
-            System.out.println(V() + " vertices" + ", " + E() + " edges");
+            System.out.println(v() + " vertices" + ", " + e() + " edges");
             int[][] disp = new int[V][V];
             for (int i = 0; i  < V; i++) {
                 for (int j = 0; j < V; j++) {

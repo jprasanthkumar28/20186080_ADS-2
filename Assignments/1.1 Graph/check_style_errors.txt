@@ -12,9 +12,7 @@ Checkstyle ends with 8 errors.
 Starting audit...
 [ERROR] M:\ADS-2\Assignments\1.1 Graph\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 [ERROR] M:\ADS-2\Assignments\1.1 Graph\Solution.java:11:5: Redundant 'public' modifier. [RedundantModifier]
-[ERROR] M:\ADS-2\Assignments\1.1 Graph\Solution.java:11:16: Name 'V' must match pattern '^[a-z][a-zA-Z0-9]*$'. [MethodName]
 [ERROR] M:\ADS-2\Assignments\1.1 Graph\Solution.java:17:5: Redundant 'public' modifier. [RedundantModifier]
-[ERROR] M:\ADS-2\Assignments\1.1 Graph\Solution.java:17:16: Name 'E' must match pattern '^[a-z][a-zA-Z0-9]*$'. [MethodName]
 [ERROR] M:\ADS-2\Assignments\1.1 Graph\Solution.java:24:5: Redundant 'public' modifier. [RedundantModifier]
 [ERROR] M:\ADS-2\Assignments\1.1 Graph\Solution.java:25: First sentence should end with a period. [JavadocStyle]
 [ERROR] M:\ADS-2\Assignments\1.1 Graph\Solution.java:32:5: Redundant 'public' modifier. [RedundantModifier]
@@ -25,12 +23,5 @@ Starting audit...
 [ERROR] M:\ADS-2\Assignments\1.1 Graph\Solution.java:70:21: Parameter V should be final. [FinalParameters]
 [ERROR] M:\ADS-2\Assignments\1.1 Graph\Solution.java:70:25: 'V' hides a field. [HiddenField]
 [ERROR] M:\ADS-2\Assignments\1.1 Graph\Solution.java:70:25: Name 'V' must match pattern '^[a-z][a-zA-Z0-9]*$'. [ParameterName]
-[ERROR] M:\ADS-2\Assignments\1.1 Graph\Solution.java:83:16: Name 'V' must match pattern '^[a-z][a-zA-Z0-9]*$'. [MethodName]
-[ERROR] M:\ADS-2\Assignments\1.1 Graph\Solution.java:92:16: Name 'E' must match pattern '^[a-z][a-zA-Z0-9]*$'. [MethodName]
-[ERROR] M:\ADS-2\Assignments\1.1 Graph\Solution.java:105:24: ',' is not followed by whitespace. [WhitespaceAfter]
-[ERROR] M:\ADS-2\Assignments\1.1 Graph\Solution.java:107: Line has trailing spaces. [RegexpSingleline]
-[ERROR] M:\ADS-2\Assignments\1.1 Graph\Solution.java:112: First sentence should end with a period. [JavadocStyle]
-[ERROR] M:\ADS-2\Assignments\1.1 Graph\Solution.java:131:12: 'for' is not followed by whitespace. [WhitespaceAround]
-[ERROR] M:\ADS-2\Assignments\1.1 Graph\Solution.java:147: Line is longer than 80 characters (found 97). [LineLength]
 Audit done.
-Checkstyle ends with 22 errors.
+Checkstyle ends with 13 errors.
