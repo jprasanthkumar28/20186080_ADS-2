@@ -15,43 +15,54 @@ import java.util.NoSuchElementException;
  * @param      <Item>  The item
  */
 public class Bag<Item> implements Iterable<Item> {
-    private int N;         // number of elements in bag
-    private Node first;    // beginning of bag
+    /**
+     * {number of elements in bag}.
+     */
+    private int n;
+    /**
+     * {beginning of bag}.
+     */
+    private Node first;
 
     /**
      * Class for node.
      */
     private class Node {
+        /**
+         * {Name of item}.
+         */
         private Item item;
+        /**
+         * {next of type node}.
+         */
         private Node next;
     }
-
-   /**
-     * Create an empty stack.
-     */
+    /**
+      * Create an empty stack.
+      */
     public Bag() {
-        first = null;
-        N = 0;
+        this.first = null;
+        this.n = 0;
     }
 
-   /**
-     * Is the BAG empty?
-     * @return boolean
-     */
+    /**
+      * Is the BAG empty?
+      * @return    {Boolean}
+      */
     public boolean isEmpty() {
         return first == null;
     }
 
-   /**
-     * Return the number of items in the bag.
-     * @return Integer.
-     */
+    /**
+      * Return the number of items in the bag.
+      * @return     {Integer}.
+      */
     public int size() {
-        return N;
+        return n;
     }
 
-   /**
-     * Add the item to the bag.
+    /**
+     * {Add the item to the bag}.
      *
      * @param      item  The item
      */
@@ -60,25 +71,25 @@ public class Bag<Item> implements Iterable<Item> {
         first = new Node();
         first.item = item;
         first.next = oldfirst;
-        N++;
+        n++;
     }
 
 
-   /**
-     * Return an iterator that iterates over the items in the bag.
-     *
-     * @return     { description_of_the_return_value }
-     */
+    /**
+      * Return an iterator that iterates over the items in the bag.
+      * @return    {Iterator}
+      */
     public Iterator<Item> iterator()  {
-        return new ListIterator();  
+        return new ListIterator();
     }
 
     /**
      * Class for list iterator.
      */
     private class ListIterator implements Iterator<Item> {
+
         /**
-         * { var_description }.
+         * {Current Node}.
          */
         private Node current = first;
 
@@ -87,27 +98,26 @@ public class Bag<Item> implements Iterable<Item> {
          *
          * @return     True if has next, False otherwise.
          */
-        public boolean hasNext() {
+        public boolean hasNext()  {
             return current != null;
         }
         /**
-         * { function_description }.
+         * {Method to remove}.
          */
         public void remove() {
             throw new UnsupportedOperationException();
         }
-
         /**
-         * { function_description }.
+         * {Method to find the next}.
          *
-         * @return     { description_of_the_return_value }
+         * @return     {Item}
          */
         public Item next() {
             if (!hasNext()) {
                 throw new NoSuchElementException();
             }
             Item item = current.item;
-            current = current.next; 
+            current = current.next;
             return item;
         }
     }
