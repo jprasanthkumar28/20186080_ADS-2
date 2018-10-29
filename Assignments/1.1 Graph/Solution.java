@@ -136,8 +136,8 @@ class GraphADT implements Graph {
 		}
 		return false;
     }
-    /**
-     * { function_description }
+    /**.
+     * To display the list.
      *
      * @param      V          { parameter_description }
      * @param      E          { parameter_description }
@@ -163,15 +163,15 @@ class GraphADT implements Graph {
     }
 
     /**
-     * { function_description }
+     * to display the matrix.
      *
      * @param      V          { parameter_description }
-     * @param      E          { parameter_description }
+     * @param      E1          { parameter_description }
      *
      * @throws     Exception  { exception_description }
      */
-    public void matrixdisplay(int V, int E) throws Exception {
-    	if (E <= 1 && V <= 1) {
+    public void matrixdisplay(int V, int E1) throws Exception {
+    	if (E1 <= 1 && V <= 1) {
     		System.out.println(V() + " vertices" + ", " + E() + " edges");
     		throw new Exception("No edges");
     	} else {
@@ -191,12 +191,11 @@ class GraphADT implements Graph {
     			}
     			System.out.println();
     		}
-    		
     	}
     }
 }
 /**
- * { item_description }
+ * Client class.
  */
 public final class Solution {
 	/**
