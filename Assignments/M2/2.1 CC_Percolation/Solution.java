@@ -1,124 +1,144 @@
-import java.util.*;
 import java.util.Scanner;
 /**
- * Class for graph.
+ * Class for percolation.
  */
-class Graph {
+class Percolation {
     /**
-     * matrix declaration.
+     *the array.
      */
-    private int[][] grid;
+    private boolean[] array;
     /**
-     * declaration of variable.
+     *object declaration for class.
      */
-    private int vertices;
+    private Graph graph;
     /**
-     * declaration of variable.
+     *array size.
      */
-    private int edges;
+    private int arraySize;
+    /**
+     *size.
+     */
+    private int size;
+    /**
+     * initializing count.
+     */
+    private int count;
+    /**
+     *first row.
+     */
+    private int top;
+    /**
+     * last row.
+     */
+    private int bottom;
+    /**
+     * Constructs the object.
+     */
+    protected Percolation() {
+
+    }
     /**
      * Constructs the object.
      *
-     * @param      vertices  The vertices
+     * @param n int
      */
-    Graph(final int vertices) {
-        grid = new int[vertices][vertices];
-    }
-    public int vertices() {
-        return vertices;
-    }
-    public void addEdge(final int vertexOne, final int vertexTwo) {
-        if (vertexOne != vertexTwo) {
-            if (!hasEdge(vertexOne, vertexTwo)) {
-                grid[vertexOne][vertexTwo] = 1;
-                // grid[vertexTwo][vertexOne] = 1;
-                edges++;
-            }
-        }
-    }
-    public boolean hasEdge(final int vertexOne, final int vertexTwo) {
-        if (grid[vertexOne][vertexTwo] == 1) {
-            return true;
-        }
-        return false;
-    }
-    // public void connected(final int v1, final int w1) {
-    //     grid[v1][w1] = 1;
-    // }
-    public int[] adj(final int v) {
-        return grid[v];
-    }
-}
-class CC {
-    private boolean[] marked;   // marked[v] = has vertex v been marked?
-    private int[] id;           // id[v] = id of connected component containing v
-    private int[] size;         // size[id] = number of vertices in given component
-    private int count;          // number of connected components
-
-    /**
-     * Computes the connected components of the undirected graph {@code G}.
-     *
-     * @param G the undirected graph
-     */
-    public CC(Graph g, int s) {
-        marked = new boolean[g.vertices()];
-        id  = new int[g.vertices()];
-        for (int i = 0; i < g.vertices(); i++) {
-            marked[i] = false;
-            if (!marked[i]) {
-                dfs(g, i);
-                count++;
-            }
-        }
-    }
-    private void dfs(Graph G, int v) {
-        marked[v] = true;
-        id[v] = count;
-        size[count]++;
-        for (int w : G.adj(v)) {
-            if (!marked[w]) {
-                dfs(G, w);
-            }
-        }
-    }
-    public boolean percolates() {
-        if (count > 1) {
-            return false;
-        } else {
-            return true;
+    Percolation(final int n) {
+        this.arraySize = n;
+        this.size = n * n;
+        this.top = size;
+        this.bottom = size + 1;
+        this.count = 0;
+        graph = new Graph(size + 2);
+        array = new boolean[size];
+        for (int i = 0; i < arraySize; i++) {
+            graph.addEdge(top, i);
+            graph.addEdge(bottom, size - i - 1);
         }
     }
     /**
-     * Returns true if vertices {@code v} and {@code w} are in the same
-     * connected component.
+     * method to convert from two dimensional to one dimensional.
      *
-     * @param  v one vertex
-     * @param  w the other vertex
-     * @return {@code true} if vertices {@code v} and {@code w} are in the same
-     *         connected component; {@code false} otherwise
-     * @throws IllegalArgumentException unless {@code 0 <= v < V}
-     * @throws IllegalArgumentException unless {@code 0 <= w < V}
+     * @param      row   The row
+     * @param      col   The col
+     *
+     * @return  onedimensional array
      */
-    public boolean connected(int v, int w) {
-        return id(v) == id(w);
+    public int toOneD(final int row, final int col) {
+        return (arraySize * (row - 1)) + (col - 1);
     }
     /**
-     * Returns the number of connected components in the graph {@code G}.
+     * Connects open sites(== full site).
      *
-     * @return the number of connected components in the graph {@code G}
+     * @param      row   The row
+     * @param      col   The col
      */
-    public int count() {
+    private void connectOpenSites(final int row, final int col) {
+        if (array[col] && !graph.hasEdge(row, col)) {
+            graph.addEdge(row, col);
+        }
+    }
+    /**
+     * method that opens the blocked site.
+     *
+     * @param      row     The row
+     * @param      col  The column
+     */
+    public void open(final int row, final int col) {
+        int index = toOneD(row, col);
+        array[index] = true;
+        count++;
+        int toprow = index - arraySize;
+        int bottomrow = index + arraySize;
+        if (arraySize == 1) {
+            graph.addEdge(top, index);
+            graph.addEdge(bottom, index);
+        }
+        if (bottomrow < size) {         //bottom
+            connectOpenSites(index, bottomrow);
+        }
+        if (toprow >= 0) {              //top
+            connectOpenSites(index, toprow);
+        }
+        if (col == 1) {                 //left
+            if (col != arraySize) {
+                connectOpenSites(index, index + 1);
+            }
+            return;
+        }
+        if (col == arraySize) {         //right
+            connectOpenSites(index, index - 1);
+            return;
+        }
+        connectOpenSites(index, index + 1);
+        connectOpenSites(index, index - 1);
+    }
+    /**
+     * Determines if open.
+     *
+     * @param      row   The row
+     * @param      col   The col
+     *
+     * @return     True if open, False otherwise.
+     */
+    public boolean isOpen(final int row, final int col) {
+        return array[toOneD(row, col)];
+    }
+    /**
+     * return number of open sites.
+     *
+     * @return count
+     */
+    public int numberOfOpenSites() {
         return count;
     }
     /**
-     * Returns the component id of the connected component containing vertex {@code v}.
+     * method to check whether there is a flow.
      *
-     * @param  v the vertex
-     * @return the component id of the connected component containing vertex {@code v}
-     * @throws IllegalArgumentException unless {@code 0 <= v < V}
+     * @return boolean
      */
-    public int id(int v) {
-        return id[v];
+    public boolean percolates() {
+        CC connectedComponents = new CC(graph);
+        return connectedComponents.connected(top, bottom);
     }
 }
 /**
@@ -128,24 +148,24 @@ public final class Solution {
     /**
      * Constructs the object.
      */
-    private Solution() {
-        //Empty Constructor.
+    protected Solution() {
+
     }
     /**
-     * {Main method}.
+     * main method to read input.
      *
-     * @param      args  The arguments
+     * @param args String
      */
     public static void main(final String[] args) {
         Scanner scan = new Scanner(System.in);
-        String num = scan.nextLine();
-        Graph graph = new Graph(Integer.parseInt(num));
+        int n = Integer.parseInt(scan.nextLine());
+        Percolation pobj = new Percolation(n);
         while (scan.hasNext()) {
-            String line = scan.nextLine();
-            String[] tokens = line.split(" ");
-            graph.addEdge(Integer.parseInt(tokens[0]) - 1, Integer.parseInt(tokens[1]) - 1);
+            String[] tokens = scan.nextLine().split(" ");
+            pobj.open(Integer.parseInt(tokens[0]),
+                      Integer.parseInt(tokens[1]));
         }
-        CC connected = new CC(graph, Integer.parseInt(num));
-        System.out.println(connected.percolates());
+        System.out.println(pobj.percolates()
+                           && pobj.numberOfOpenSites() != 0);
     }
 }
