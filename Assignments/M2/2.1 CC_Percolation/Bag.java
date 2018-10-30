@@ -1,74 +1,51 @@
-/*************************************************************************
- *  Compilation:  javac Bag.java
- *  Execution:    java Bag < input.txt
- *
- *  A generic bag or multiset, implemented using a linked list.
- *
- *************************************************************************/
-
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
-/**
- * Class for bag.
- *
- * @param      <Item>  The item
- */
 public class Bag<Item> implements Iterable<Item> {
-    /**
-     * {number of elements in bag}.
-     */
-    private int n;
-    /**
-     * {beginning of bag}.
-     */
-    private Node first;
+    private Node<Item> first;    // beginning of bag
+    private int n;               // number of elements in bag
 
-    /**
-     * Class for node.
-     */
-    private class Node {
-        /**
-         * {Name of item}.
-         */
+    // helper linked list class
+    private static class Node<Item> {
         private Item item;
-        /**
-         * {next of type node}.
-         */
-        private Node next;
-    }
-    /**
-      * Create an empty stack.
-      */
-    public Bag() {
-        this.first = null;
-        this.n = 0;
+        private Node<Item> next;
     }
 
     /**
-      * Is the BAG empty?
-      * @return    {Boolean}
-      */
+     * Initializes an empty bag.
+     */
+    public Bag() {
+        first = null;
+        n = 0;
+    }
+
+    /**
+     * Returns true if this bag is empty.
+     *
+     * @return {@code true} if this bag is empty;
+     *         {@code false} otherwise
+     */
     public boolean isEmpty() {
         return first == null;
     }
 
     /**
-      * Return the number of items in the bag.
-      * @return     {Integer}.
-      */
+     * Returns the number of items in this bag.
+     *
+     * @return the number of items in this bag
+     */
     public int size() {
         return n;
     }
 
     /**
-     * {Add the item to the bag}.
+     * Adds the item to this bag.
      *
-     * @param      item  The item
+     * @param  item the item to add to this bag
      */
-    public void add(final Item item) {
-        Node oldfirst = first;
-        first = new Node();
+    public void add(Item item) {
+        Node<Item> oldfirst = first;
+        first = new Node<Item>();
         first.item = item;
         first.next = oldfirst;
         n++;
@@ -76,46 +53,27 @@ public class Bag<Item> implements Iterable<Item> {
 
 
     /**
-      * Return an iterator that iterates over the items in the bag.
-      * @return    {Iterator}
-      */
+     * Returns an iterator that iterates over the items in this bag in arbitrary order.
+     *
+     * @return an iterator that iterates over the items in this bag in arbitrary order
+     */
     public Iterator<Item> iterator()  {
-        return new ListIterator();
+        return new ListIterator<Item>(first);
     }
 
-    /**
-     * Class for list iterator.
-     */
-    private class ListIterator implements Iterator<Item> {
+    // an iterator, doesn't implement remove() since it's optional
+    private class ListIterator<Item> implements Iterator<Item> {
+        private Node<Item> current;
 
-        /**
-         * {Current Node}.
-         */
-        private Node current = first;
+        public ListIterator(Node<Item> first) {
+            current = first;
+        }
 
-        /**
-         * Determines if it has next.
-         *
-         * @return     True if has next, False otherwise.
-         */
-        public boolean hasNext()  {
-            return current != null;
-        }
-        /**
-         * {Method to remove}.
-         */
-        public void remove() {
-            throw new UnsupportedOperationException();
-        }
-        /**
-         * {Method to find the next}.
-         *
-         * @return     {Item}
-         */
+        public boolean hasNext()  { return current != null;                     }
+        public void remove()      { throw new UnsupportedOperationException();  }
+
         public Item next() {
-            if (!hasNext()) {
-                throw new NoSuchElementException();
-            }
+            if (!hasNext()) throw new NoSuchElementException();
             Item item = current.item;
             current = current.next;
             return item;
