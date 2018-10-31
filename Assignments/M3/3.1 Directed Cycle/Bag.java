@@ -1,14 +1,5 @@
-/*************************************************************************
- *  Compilation:  javac Bag.java
- *  Execution:    java Bag < input.txt
- *
- *  A generic bag or multiset, implemented using a linked list.
- *
- *************************************************************************/
-
 import java.util.Iterator;
 import java.util.NoSuchElementException;
-
 /**
  * Class for bag.
  *
@@ -29,34 +20,35 @@ public class Bag<Item> implements Iterable<Item> {
      */
     private class Node {
         /**
-         * {Name of item}.
+         * {Item}.
          */
         private Item item;
         /**
-         * {next of type node}.
+         * {Next of type node}.
          */
         private Node next;
     }
+
     /**
-      * Create an empty stack.
-      */
+     * Create an empty stack.
+     */
     public Bag() {
-        this.first = null;
-        this.n = 0;
+        first = null;
+        n = 0;
     }
 
     /**
-      * Is the BAG empty?
-      * @return    {Boolean}
-      */
+     * Is the BAG empty?
+     * @return    {Boolean}
+     */
     public boolean isEmpty() {
         return first == null;
     }
 
     /**
-      * Return the number of items in the bag.
-      * @return     {Integer}.
-      */
+     * Return the number of items in the bag.
+     * @return     {Integer}.
+     */
     public int size() {
         return n;
     }
@@ -76,9 +68,9 @@ public class Bag<Item> implements Iterable<Item> {
 
 
     /**
-      * Return an iterator that iterates over the items in the bag.
-      * @return    {Iterator}
-      */
+     * Return an iterator that iterates over the items in the bag.
+     * @return     {Iterator}.
+     */
     public Iterator<Item> iterator()  {
         return new ListIterator();
     }
@@ -87,7 +79,6 @@ public class Bag<Item> implements Iterable<Item> {
      * Class for list iterator.
      */
     private class ListIterator implements Iterator<Item> {
-
         /**
          * {Current Node}.
          */
@@ -98,7 +89,7 @@ public class Bag<Item> implements Iterable<Item> {
          *
          * @return     True if has next, False otherwise.
          */
-        public boolean hasNext()  {
+        public boolean hasNext() {
             return current != null;
         }
         /**
@@ -108,7 +99,7 @@ public class Bag<Item> implements Iterable<Item> {
             throw new UnsupportedOperationException();
         }
         /**
-         * {Method to find the next}.
+         * {Next Method}.
          *
          * @return     {Item}
          */

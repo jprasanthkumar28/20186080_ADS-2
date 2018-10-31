@@ -1,8 +1,4 @@
-/**
- * Directed Cycle.
- */
 import java.util.Scanner;
-// import java.util.Arrays;
 /**
  * Class for solution.
  */
@@ -11,25 +7,22 @@ public final class Solution {
      * Constructs the object.
      */
     private Solution() {
-        // empty Constructor.
+        //unused constructor.
     }
     /**
-     * Client Function.
+     * { Client Program }.
      *
      * @param      args  The arguments
      */
     public static void main(final String[] args) {
-        Scanner scan = new Scanner(System.in);
-        int vertices = Integer.parseInt(scan.nextLine());
-        int edges = Integer.parseInt(scan.nextLine());
+        Scanner sc = new Scanner(System.in);
+        int vertices = Integer.parseInt(sc.nextLine());
+        int edges = Integer.parseInt(sc.nextLine());
         Digraph directedGraph = new Digraph(vertices);
-        while (edges > 0) {
-            String[] tokens = scan.nextLine().split(" ");
-            // System.out.println(Arrays.toString(tokens));
-            int a = Integer.parseInt(tokens[0]);
-            int b = Integer.parseInt(tokens[1]);
-            directedGraph.addEdge(a, b);
-            edges--;
+        for (int i = 0; i < edges; i++) {
+            String[] tokens = sc.nextLine().split(" ");
+            directedGraph.addEdge(Integer.parseInt(tokens[0]),
+            Integer.parseInt(tokens[1]));
         }
         DirectedCycle directedCycle = new DirectedCycle(directedGraph);
         if (directedCycle.hasCycle()) {
@@ -39,3 +32,4 @@ public final class Solution {
         }
     }
 }
+
