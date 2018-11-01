@@ -2,13 +2,14 @@ import java.util.*;
 public class WordNet {
 
     // constructor takes the name of the two input files
+    private int verticesCount;
     public WordNet(String synsets, String hypernym) {
         // parse(synsets);
         readSynsetFile(synsets, hypernym);
     }
     public void readSynsetFile(String fileName, String hypernym) {
         int id = 0;
-        int verticesCount = 0;
+        verticesCount = 0;
         try {
             In input = new In("./Files/" + fileName);
             String[] str1 = null;
@@ -54,14 +55,24 @@ public class WordNet {
                 }
             }
             DirectedCycle directedCycle = new DirectedCycle(digraph1);
+            int count = 0;
+            for (int i = 0; i < verticesCount; i++) {
+               if (digraph1.outdegree(i) == 0) {
+                   count++;
+               }                
+           }
+            if (count > 1) {
+               throw new IllegalArgumentException("Multiple roots");
+            }
             if (directedCycle.hasCycle()) {
                 System.out.println("Cycle detected");
             } else {
                 System.out.println(digraph1);
             }    
-        } catch (Exception e) {
+        }   catch (Exception e) {
             System.out.println(e.getMessage());
         }
+
     }
     // // do unit testing of this class
     // public static void main(String[] args)
