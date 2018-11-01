@@ -286,14 +286,11 @@ Your Output:
 not found
 ----------------------------------------
 
-########## Testcase 14: Failed ##########
+########## Testcase 14: Passed ##########
 Expected Output: 
 Cycle detected
 
 Your Output: 
-3 vertices, 2 edges 
-0: 1 
-1: 0 
-2:
+Cycle detected
 ----------------------------------------
 

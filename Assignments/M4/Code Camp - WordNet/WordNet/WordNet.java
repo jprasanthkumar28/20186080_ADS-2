@@ -53,9 +53,14 @@ public class WordNet {
                     digraph1.addEdge(Integer.parseInt(tokens1[0]), Integer.parseInt(tokens1[i]));
                 }
             }
-            System.out.println(digraph1);    
+            DirectedCycle directedCycle = new DirectedCycle(digraph1);
+            if (directedCycle.hasCycle()) {
+                System.out.println("Cycle detected");
+            } else {
+                System.out.println(digraph1);
+            }    
         } catch (Exception e) {
-            System.out.println("not found");
+            System.out.println(e.getMessage());
         }
     }
     // // do unit testing of this class
