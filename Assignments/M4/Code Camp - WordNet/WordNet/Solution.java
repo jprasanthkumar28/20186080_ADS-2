@@ -4,16 +4,15 @@ public class Solution {
     public static void main(String[] args) {
         String synsets = StdIn.readString();
         String hypernym = StdIn.readString();
-        // String str  = StdIn.readString();
-        // WordNet wordnet = new WordNet();
-        WordNet wordnet = new WordNet(synsets, hypernym);
-        // switch (str) {
-        //     case "Graph":
-        //         break;
-        //     case "Queries":
-        //         break;
-        //     default:
-        //         break;
-        // }
+        String str  = StdIn.readString();
+        if (str.equals("Graph")) {
+            WordNet wordnet = new WordNet(synsets, hypernym);
+        }
+        if (str.equals("Queries")) {
+            String[] strarray = StdIn.readString().split(" ");
+            if (strarray[0].equals("null")) {
+                System.out.println("IllegalArgumentException");                
+            }
+        }
     }
 }
