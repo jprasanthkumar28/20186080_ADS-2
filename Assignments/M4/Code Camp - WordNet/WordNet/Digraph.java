@@ -112,7 +112,20 @@ public class Digraph {
         validateVertex(v);
         return adj[v].size();
     }
-
+    /**
+     * to count out degree values.
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public int outDegreeCount() {
+        int max = 0;
+        for (int i = 0; i < vertices; i++) {
+            if (outdegree(i) == 0) {
+                max++;
+            }
+        }
+        return max;
+    }
     /**
      * Returns the number of directed edges incident to vertex {@code v}.
      * This is known as the <em>indegree</em> of vertex {@code v}.
