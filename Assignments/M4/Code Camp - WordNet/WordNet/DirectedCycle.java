@@ -29,10 +29,10 @@ public class DirectedCycle {
      * @param graph the digraph
      */
     public DirectedCycle(final Digraph graph) {
-        marked  = new boolean[graph.vertex()];
-        onStack = new boolean[graph.vertex()];
-        edgeTo  = new int[graph.vertex()];
-        for (int v = 0; v < graph.vertex(); v++) {
+        marked  = new boolean[graph.vertices()];
+        onStack = new boolean[graph.vertices()];
+        edgeTo  = new int[graph.vertices()];
+        for (int v = 0; v < graph.vertices(); v++) {
             if (!marked[v] && cycle == null) {
                 dfs(graph, v);
             }
