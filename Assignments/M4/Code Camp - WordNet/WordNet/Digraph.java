@@ -23,6 +23,27 @@ public class Digraph {
      */
     private int[] indegree;        // indegree[v] = indegree of vertex v
     /**
+     * Constructs the object.
+     *
+     * @param      G     { parameter_description }
+     */
+    public Digraph(final Digraph G) {
+        this(G.vertices());
+        this.edges = G.edge();
+        for (int v = 0; v < vertices; v++)
+            this.indegree[v] = G.indegree(v);
+        for (int v = 0; v < G.vertices(); v++) {
+            // reverse so that adjacency list is in same order as original
+            Stack<Integer> reverse = new Stack<Integer>();
+            for (int w : G.adj[v]) {
+                reverse.push(w);
+            }
+            for (int w : reverse) {
+                adj[v].add(w);
+            }
+        }
+    }
+    /**
      * Initializes an empty digraph with <em>V</em> vertices.
      *
      * @param  vertexOne the number of vertices
@@ -46,7 +67,7 @@ public class Digraph {
      *
      * @return the number of vertices in this digraph
      */
-    public int vertex() {
+    public int vertices() {
         return vertices;
     }
 
