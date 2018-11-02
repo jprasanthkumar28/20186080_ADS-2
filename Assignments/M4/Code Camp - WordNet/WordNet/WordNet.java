@@ -50,7 +50,7 @@ public class WordNet {
                 String[] nouns = tokens[1].split(" ");
 
                 ArrayList<String> nounList = new ArrayList<String>();
-                for (String noun : nouns ) {
+                for (String noun : nouns) {
                     nounList.add(noun);
                 }
                 idST.put(id, tokens[1]);
@@ -118,7 +118,7 @@ public class WordNet {
      *
      * @return     True if noun, False otherwise.
      */
-    public boolean isNoun(String word) {
+    public boolean isNoun(final String word) {
         return nounST.contains(word);
     }
     /**
@@ -129,7 +129,7 @@ public class WordNet {
      *
      * @return     { description_of_the_return_value }
      */
-    public int distance(String nounA, String nounB) {
+    public int distance(final String nounA, final String nounB) {
         if (!isNoun(nounA) || !isNoun(nounB)) {
             throw new IllegalArgumentException();
         }
