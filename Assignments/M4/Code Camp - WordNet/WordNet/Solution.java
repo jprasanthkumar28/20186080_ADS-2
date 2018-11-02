@@ -51,7 +51,7 @@ public final class Solution {
                         }
                         System.out.println(
                             "distance = " + wordnet1.distance(stringArray[0],
-                        stringArray[1]) + ", ancestor = " 
+                        stringArray[1]) + ", ancestor = "
                             + wordnet1.sap(stringArray[0], stringArray[1]));
                 }
                 } catch (Exception e) {
