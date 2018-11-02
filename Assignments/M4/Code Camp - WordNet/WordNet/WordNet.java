@@ -1,10 +1,13 @@
+/**
+ * ArrayList from util pacakge.
+ */
 import java.util.ArrayList;
 /**
  * Class for word net.
  */
 public class WordNet {
     /**
-     * LinearProbingHash ST for noun. 
+     * LinearProbingHash ST for noun.
      */
     private LinearProbingHashST<String, ArrayList<Integer>> nounST;
     /**
@@ -33,7 +36,7 @@ public class WordNet {
      * @param      synsets    The synsets
      * @param      hypernyms  The hypernyms
      */
-    public WordNet(String synsets, String hypernyms) { 
+    public WordNet(final String synsets, final String hypernyms) {
         nounST = new LinearProbingHashST<String, ArrayList<Integer>>();
         idST = new LinearProbingHashST<Integer, String>();
         try {
@@ -74,11 +77,11 @@ public class WordNet {
                 int syssetIds = Integer.parseInt(tokens[0]);
 
                 for (int i = 1; i < tokens.length; i++) {
-                    digraph.addEdge(syssetIds, Integer.parseInt(tokens[i])); 
+                    digraph.addEdge(syssetIds, Integer.parseInt(tokens[i]));
                 }
             }
             
-        } catch(Exception e) {
+        } catch (Exception e) {
             System.out.println(e.getMessage());
         }
     //graph built
