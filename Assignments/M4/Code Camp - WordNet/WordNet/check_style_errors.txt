@@ -1,7 +1,5 @@
 Starting audit...
-[ERROR] M:\ADS-2\Assignments\M4\Code Camp - WordNet\WordNet\Bag.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 Audit done.
-Checkstyle ends with 1 errors.
 Starting audit...
 [ERROR] M:\ADS-2\Assignments\M4\Code Camp - WordNet\WordNet\BreadthFirstDirectedPaths.java:1: Missing a Javadoc comment. [JavadocType]
 [ERROR] M:\ADS-2\Assignments\M4\Code Camp - WordNet\WordNet\BreadthFirstDirectedPaths.java:2:5: Missing a Javadoc comment. [JavadocVariable]
@@ -48,7 +46,7 @@ Starting audit...
 Audit done.
 Checkstyle ends with 42 errors.
 Starting audit...
-[ERROR] M:\ADS-2\Assignments\M4\Code Camp - WordNet\WordNet\Digraph.java:0: File does not end with a newline. [NewlineAtEndOfFile]
+[ERROR] M:\ADS-2\Assignments\M4\Code Camp - WordNet\WordNet\Digraph.java:192: Line has trailing spaces. [RegexpSingleline]
 Audit done.
 Checkstyle ends with 1 errors.
 Starting audit...
@@ -295,17 +293,14 @@ Audit done.
 Checkstyle ends with 34 errors.
 Starting audit...
 [ERROR] M:\ADS-2\Assignments\M4\Code Camp - WordNet\WordNet\SAP.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] M:\ADS-2\Assignments\M4\Code Camp - WordNet\WordNet\SAP.java:17:30: Expected @param tag for 'digraph1'. [JavadocMethod]
+[ERROR] M:\ADS-2\Assignments\M4\Code Camp - WordNet\WordNet\SAP.java:16: Line has trailing spaces. [RegexpSingleline]
+[ERROR] M:\ADS-2\Assignments\M4\Code Camp - WordNet\WordNet\SAP.java:18: Line has trailing spaces. [RegexpSingleline]
 Audit done.
-Checkstyle ends with 2 errors.
+Checkstyle ends with 3 errors.
 Starting audit...
-[ERROR] M:\ADS-2\Assignments\M4\Code Camp - WordNet\WordNet\Solution.java:4: Class Solution should be declared as final. [FinalClass]
-[ERROR] M:\ADS-2\Assignments\M4\Code Camp - WordNet\WordNet\Solution.java:16:29: Parameter args should be final. [FinalParameters]
-[ERROR] M:\ADS-2\Assignments\M4\Code Camp - WordNet\WordNet\Solution.java:45: Line has trailing spaces. [RegexpSingleline]
-[ERROR] M:\ADS-2\Assignments\M4\Code Camp - WordNet\WordNet\Solution.java:50: Line is longer than 80 characters (found 91). [LineLength]
-[ERROR] M:\ADS-2\Assignments\M4\Code Camp - WordNet\WordNet\Solution.java:54: Line is longer than 80 characters (found 88). [LineLength]
+[ERROR] M:\ADS-2\Assignments\M4\Code Camp - WordNet\WordNet\Solution.java:54: Line has trailing spaces. [RegexpSingleline]
 Audit done.
-Checkstyle ends with 5 errors.
+Checkstyle ends with 1 errors.
 Starting audit...
 [ERROR] M:\ADS-2\Assignments\M4\Code Camp - WordNet\WordNet\Stack.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 [ERROR] M:\ADS-2\Assignments\M4\Code Camp - WordNet\WordNet\Stack.java:13: Line has trailing spaces. [RegexpSingleline]

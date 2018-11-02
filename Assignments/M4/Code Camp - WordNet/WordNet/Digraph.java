@@ -189,7 +189,8 @@ public class Digraph {
         for (int v = 0; v < vertices; v++) {
             s.append(String.format("%d: ", v));
             for (int w : adj[v]) {
-                s.append(String.format("%d ", w));
+    
+          s.append(String.format("%d ", w));
             }
             s.append(NEWLINE);
         }

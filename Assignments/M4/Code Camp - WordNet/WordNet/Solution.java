@@ -1,7 +1,7 @@
 /**
  * Class for solution.
  */
-public class Solution {
+public final class Solution {
     /**
      * Constructs the object.
      */
@@ -13,7 +13,7 @@ public class Solution {
      *
      * @param      args  The arguments
      */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         /**
          * Synsets File name.
          */
@@ -42,17 +42,17 @@ public class Solution {
             case "Queries":
                 try {
                     WordNet wordnet1 = new WordNet(synsetsFname, hypernymFname);
-                    
                     while (StdIn.hasNextLine()) {
                         String line = StdIn.readLine();
                         String[] stringArray = line.split(" ");
                         if (stringArray[0].equals("null")) {
-                            throw new IllegalArgumentException("IllegalArgumentException");
+                            throw new IllegalArgumentException(
+                                "IllegalArgumentException");
                         }
                         System.out.println(
                             "distance = " + wordnet1.distance(stringArray[0],
-                        stringArray[1]) + ", ancestor = " + wordnet1.sap(stringArray[0],
-                        stringArray[1]));
+                        stringArray[1]) + ", ancestor = " 
+                            + wordnet1.sap(stringArray[0], stringArray[1]));
                 }
                 } catch (Exception e) {
                     System.out.println(e.getMessage());

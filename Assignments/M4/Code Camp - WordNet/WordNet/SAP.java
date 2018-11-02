@@ -13,7 +13,11 @@ public class SAP {
 
     /**
     * constructor takes a digraph (not necessarily a DAG).
-    **/
+    
+    Constructs the object.
+    
+    @param      digraph1  The digraph 1
+    */
     public SAP(final Digraph digraph1) {
         this.digraph = new Digraph(digraph1);
         bfs = new BreadthFirstDirectedPaths[this.digraph.vertices()];
