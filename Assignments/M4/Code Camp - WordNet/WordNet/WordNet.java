@@ -3,14 +3,36 @@ import java.util.ArrayList;
  * Class for word net.
  */
 public class WordNet {
+    /**
+     * LinearProbingHash ST for noun. 
+     */
     private LinearProbingHashST<String, ArrayList<Integer>> nounST;
+    /**
+     * LinearProbingHash ST for id ST.
+     */
     private LinearProbingHashST<Integer, String> idST;
+    /**
+     * for Digraph varaible.
+     */
     private Digraph digraph;
+    /**
+     * for SAP variable.
+     */
     private SAP sap;
+    /**
+     * Gets the digraph.
+     *
+     * @return     The digraph.
+     */
     public Digraph getDigraph() {
         return this.digraph;
     }
-
+    /**
+     * Constructs the object.
+     *
+     * @param      synsets    The synsets
+     * @param      hypernyms  The hypernyms
+     */
     public WordNet(String synsets, String hypernyms) { 
         nounST = new LinearProbingHashST<String, ArrayList<Integer>>();
         idST = new LinearProbingHashST<Integer, String>();
@@ -63,6 +85,9 @@ public class WordNet {
         sap = new SAP(digraph);
     }
 
+    /**
+     * to display the graph.
+     */
     public void print() {
         DirectedCycle directedCycle = new DirectedCycle(digraph);
         if (directedCycle.hasCycle()) {
@@ -74,13 +99,33 @@ public class WordNet {
         }
     }
 
+    /**
+     * Iterable function.
+     *
+     * @return     keys of noun.
+     */
     public Iterable<String> nouns() {
         return nounST.keys();
     }
 
+    /**
+     * Determines if noun.
+     *
+     * @param      word  The word
+     *
+     * @return     True if noun, False otherwise.
+     */
     public boolean isNoun(String word) {
         return nounST.contains(word);
     }
+    /**
+     * to cal the distance from two nouns.
+     *
+     * @param      nounA  The noun a
+     * @param      nounB  The noun b
+     *
+     * @return     { description_of_the_return_value }
+     */
     public int distance(String nounA, String nounB) {
         if (!isNoun(nounA) || !isNoun(nounB)) {
             throw new IllegalArgumentException();
@@ -100,6 +145,4 @@ public class WordNet {
         int ancestor = sap.ancestor(idA, idB);
         return idST.get(ancestor);
     }
-
-
 }
