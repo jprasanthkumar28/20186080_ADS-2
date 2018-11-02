@@ -25,17 +25,18 @@ public class Digraph {
     /**
      * Constructs the object.
      *
-     * @param      G     { parameter_description }
+     * @param      digraph1     { parameter_description }
      */
-    public Digraph(final Digraph G) {
-        this(G.vertices());
-        this.edges = G.edge();
-        for (int v = 0; v < vertices; v++)
-            this.indegree[v] = G.indegree(v);
-        for (int v = 0; v < G.vertices(); v++) {
+    public Digraph(final Digraph digraph1) {
+        this(digraph1.vertices());
+        this.edges = digraph1.edge();
+        for (int v = 0; v < vertices; v++) {
+            this.indegree[v] = digraph1.indegree(v);
+        }
+        for (int v = 0; v < digraph1.vertices(); v++) {
             // reverse so that adjacency list is in same order as original
             Stack<Integer> reverse = new Stack<Integer>();
-            for (int w : G.adj[v]) {
+            for (int w : digraph1.adj[v]) {
                 reverse.push(w);
             }
             for (int w : reverse) {
