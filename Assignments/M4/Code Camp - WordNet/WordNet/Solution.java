@@ -17,15 +17,15 @@ public class Solution {
         /**
          * Synsets File name.
          */
-        String synsetsFname = StdIn.readString();
+        String synsetsFname = StdIn.readLine();
         /**
          * Hypernym File name.
          */
-        String hypernymFname = StdIn.readString();
+        String hypernymFname = StdIn.readLine();
         /**
          * to read a string.
          */
-        String str  = StdIn.readString();
+        String str  = StdIn.readLine();
         /**
          * Switch case.
          */

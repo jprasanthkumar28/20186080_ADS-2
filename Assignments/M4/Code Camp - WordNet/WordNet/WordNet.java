@@ -41,46 +41,26 @@ public class WordNet {
                 }
             }
         //Hypernyms
-        assert id != 1;
-        this.digraph = new Digraph(id + 1);
+            assert id != 1;
+            this.digraph = new Digraph(id + 1);
 
-        input = new In("./Files/" + hypernyms);
-        while (!input.isEmpty()) {
-            String line = input.readLine();
-            String[] tokens = line.split(",");
+            input = new In("./Files/" + hypernyms);
+            while (!input.isEmpty()) {
+                String line = input.readLine();
+                String[] tokens = line.split(",");
 
-            int syssetIds = Integer.parseInt(tokens[0]);
+                int syssetIds = Integer.parseInt(tokens[0]);
 
-            for (int i = 1; i < tokens.length; i++) {
-                digraph.addEdge(syssetIds, Integer.parseInt(tokens[i])); 
+                for (int i = 1; i < tokens.length; i++) {
+                    digraph.addEdge(syssetIds, Integer.parseInt(tokens[i])); 
+                }
             }
+            
+        } catch(Exception e) {
+            System.out.println(e.getMessage());
         }
-        
-    } catch(Exception e) {
-        System.out.println(e.getMessage());
-    }
     //graph built
-    sap = new SAP(digraph);
-    }
-
-    public int distance(String nounA, String nounB) {
-        if (!isNoun(nounA) || !isNoun(nounB)) {
-            throw new IllegalArgumentException();
-        }
-        ArrayList<Integer> idA = nounST.get(nounA);
-        ArrayList<Integer> idB = nounST.get(nounB);
-        return sap.length(idA, idB);
-    }
-
-    public String sap(final String nounA, final String nounB) {
-        if (!isNoun(nounA) || !isNoun(nounB)) {
-            throw new IllegalArgumentException();
-        }
-        ArrayList<Integer> idA = nounST.get(nounA);
-        ArrayList<Integer> idB = nounST.get(nounB);
-
-        int ancestor = sap.ancestor(idA, idB);
-        return idST.get(ancestor);
+        sap = new SAP(digraph);
     }
 
     public void print() {
@@ -101,5 +81,25 @@ public class WordNet {
     public boolean isNoun(String word) {
         return nounST.contains(word);
     }
+    public int distance(String nounA, String nounB) {
+        if (!isNoun(nounA) || !isNoun(nounB)) {
+            throw new IllegalArgumentException();
+        }
+        ArrayList<Integer> idA = nounST.get(nounA);
+        ArrayList<Integer> idB = nounST.get(nounB);
+        return sap.length(idA, idB);
+    }
+
+    public String sap(final String nounA, final String nounB) {
+        if (!isNoun(nounA) || !isNoun(nounB)) {
+            throw new IllegalArgumentException();
+        }
+        ArrayList<Integer> idA = nounST.get(nounA);
+        ArrayList<Integer> idB = nounST.get(nounB);
+
+        int ancestor = sap.ancestor(idA, idB);
+        return idST.get(ancestor);
+    }
+
 
 }
