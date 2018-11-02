@@ -80,7 +80,6 @@ public class WordNet {
                     digraph.addEdge(syssetIds, Integer.parseInt(tokens[i]));
                 }
             }
-            
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
@@ -138,6 +137,14 @@ public class WordNet {
         return sap.length(idA, idB);
     }
 
+    /**
+     * Sap function.
+     *
+     * @param      nounA  The noun a
+     * @param      nounB  The noun b
+     *
+     * @return     { description_of_the_return_value }
+     */
     public String sap(final String nounA, final String nounB) {
         if (!isNoun(nounA) || !isNoun(nounB)) {
             throw new IllegalArgumentException();

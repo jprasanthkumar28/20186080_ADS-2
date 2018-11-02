@@ -396,8 +396,5 @@ Audit done.
 Checkstyle ends with 129 errors.
 Starting audit...
 [ERROR] M:\ADS-2\Assignments\M4\Code Camp - WordNet\WordNet\WordNet.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] M:\ADS-2\Assignments\M4\Code Camp - WordNet\WordNet\WordNet.java:83: Line has trailing spaces. [RegexpSingleline]
-[ERROR] M:\ADS-2\Assignments\M4\Code Camp - WordNet\WordNet\WordNet.java:141:5: Class 'WordNet' looks like designed for extension (can be subclassed), but the method 'sap' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'WordNet' final or making the method 'sap' static/final/abstract/empty, or adding allowed annotation for the method. [DesignForExtension]
-[ERROR] M:\ADS-2\Assignments\M4\Code Camp - WordNet\WordNet\WordNet.java:141:5: Missing a Javadoc comment. [JavadocMethod]
 Audit done.
-Checkstyle ends with 4 errors.
+Checkstyle ends with 1 errors.
