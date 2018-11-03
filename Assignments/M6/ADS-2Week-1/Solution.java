@@ -20,20 +20,12 @@ class PageRank {
 		}
 		return count;
 	}
-	/**
-	 * to display the graph.
-	 */
-	public String display() {
-		String str = "";
-		Digraph digraph = new Digraph(vertices);
-		if (digraph.outDegreeCount() == 0) {
-			digraph.addEdge(vertices, edges);
-        }
-        return str;
-	}
-
     public String toString() {
         StringBuilder s = new StringBuilder();
+        Digraph digraph = new Digraph(vertices);
+        if (digraph.outDegreeCount() == 0) {
+            digraph.addEdge(vertices, edges);
+        }
         s.append(vertices + " vertices, " + edges + " edges " + "\n");
         for (int v = 0; v < vertices; v++) {
             s.append(String.format("%d: ", v));
@@ -73,7 +65,7 @@ public class Solution {
 		PageRank p = new PageRank(digraph);
 		// print the page rank object
 		p.getPR();
-		p.toString();
+		// p.toString();
 		// This part is only for the final test case
 		
 		// File path to the web content
