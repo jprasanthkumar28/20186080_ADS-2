@@ -12,16 +12,8 @@ Expected Output:
 3 - 0.0
 
 Your Output: 
-4 vertices, 5 edges 
-0: 1 1 
-1: 2 
-2: 0 
-3: 2 
-
-0 - 0.5
-1 - 0.5
-2 - 0.5
-3 - 0.0
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 2
+	at Solution.main(Solution.java:101)
 ----------------------------------------
 
 ########## Testcase 1: Failed ##########
@@ -38,16 +30,8 @@ Expected Output:
 3 - 0.09090909090909086
 
 Your Output: 
-4 vertices, 6 edges 
-0: 1 
-1: 0 0 
-2: 0 0 
-3: 0 
-
-0 - 0.75
-1 - 0.75
-2 - 0.0
-3 - 0.0
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 3
+	at Solution.main(Solution.java:101)
 ----------------------------------------
 
 ########## Testcase 2: Failed ##########
@@ -64,16 +48,8 @@ Expected Output:
 3 - 0.07692307692307687
 
 Your Output: 
-4 vertices, 8 edges 
-0: 1 
-1: 0 0 
-2: 0 0 0 
-3: 0 0 
-
-0 - 0.75
-1 - 0.75
-2 - 0.0
-3 - 0.0
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 3
+	at Solution.main(Solution.java:101)
 ----------------------------------------
 
 ########## Testcase 3: Failed ##########
@@ -98,24 +74,8 @@ Expected Output:
 7 - 0.02941176470588232
 
 Your Output: 
-8 vertices, 14 edges 
-0: 1 1 1 
-1: 0 
-2: 0 
-3: 0 0 0 0 0 
-4: 0 
-5: 0 
-6: 0 
-7: 0 
-
-0 - 0.875
-1 - 0.875
-2 - 0.0
-3 - 0.0
-4 - 0.0
-5 - 0.0
-6 - 0.0
-7 - 0.0
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 2
+	at Solution.main(Solution.java:101)
 ----------------------------------------
 
 ########## Testcase 4: Failed ##########
@@ -136,20 +96,8 @@ Expected Output:
 5 - 0.07936507936507975
 
 Your Output: 
-6 vertices, 8 edges 
-0: 1 1 1 
-1: 0 
-2: 0 
-3: 0 0 
-4: 0 
-5: 
-
-0 - 0.6666666666666666
-1 - 0.6666666666666666
-2 - 0.0
-3 - 0.0
-4 - 0.0
-5 - 0.0
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 2
+	at Solution.main(Solution.java:101)
 ----------------------------------------
 
 ########## Testcase 5: Failed ##########
@@ -174,27 +122,11 @@ Expected Output:
 7 - 0.051470588235294074
 
 Your Output: 
-8 vertices, 10 edges 
-0: 1 1 1 
-1: 0 
-2: 0 
-3: 0 0 0 0 0 
-4: 
-5: 
-6: 
-7: 
-
-0 - 0.375
-1 - 0.375
-2 - 0.0
-3 - 0.0
-4 - 0.0
-5 - 0.0
-6 - 0.0
-7 - 0.0
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 2
+	at Solution.main(Solution.java:101)
 ----------------------------------------
 
-########## Testcase 6: Passed ##########
+########## Testcase 6: Failed ##########
 Expected Output: 
 4 vertices, 4 edges 
 0: 1 
@@ -208,16 +140,8 @@ Expected Output:
 3 - 0.25
 
 Your Output: 
-4 vertices, 4 edges 
-0: 1 
-1: 2 
-2: 3 
-3: 0 
-
-0 - 0.25
-1 - 0.25
-2 - 0.25
-3 - 0.25
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 2
+	at Solution.main(Solution.java:101)
 ----------------------------------------
 
 ########## Testcase 7: Failed ##########
@@ -238,20 +162,8 @@ Expected Output:
 5 - 0.12499999999999999
 
 Your Output: 
-6 vertices, 6 edges 
-0: 1 
-1: 2 
-2: 3 
-3: 0 0 
-4: 0 
-5: 
-
-0 - 0.3333333333333333
-1 - 0.3333333333333333
-2 - 0.3333333333333333
-3 - 0.3333333333333333
-4 - 0.0
-5 - 0.0
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 2
+	at Solution.main(Solution.java:101)
 ----------------------------------------
 
 ########## Testcase 8: Failed ##########
@@ -269,13 +181,13 @@ Expected Output:
 
 Your Output: 
 4 vertices, 12 edges 
-0: 1 1 1 
+0: 0 0 0 
 1: 0 0 0 
-2: 0 0 0 
-3: 0 0 0 
+2: 1 1 1 
+3: 2 2 2 
 
-0 - 0.75
-1 - 0.75
+0 - 1.0
+1 - 0.0
 2 - 0.0
 3 - 0.0
 ----------------------------------------
@@ -298,23 +210,11 @@ Expected Output:
 5 - 0.060240963855421686
 
 Your Output: 
-6 vertices, 14 edges 
-0: 1 1 1 
-1: 0 0 0 
-2: 0 0 0 0 
-3: 0 0 0 
-4: 0 
-5: 
-
-0 - 0.6666666666666669
-1 - 0.6666666666666669
-2 - 0.0
-3 - 0.0
-4 - 0.0
-5 - 0.0
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 4
+	at Solution.main(Solution.java:101)
 ----------------------------------------
 
-########## Testcase 10: Passed ##########
+########## Testcase 10: Failed ##########
 Expected Output: 
 2 vertices, 2 edges 
 0: 1 
@@ -325,11 +225,11 @@ Expected Output:
 
 Your Output: 
 2 vertices, 2 edges 
-0: 1 
+0: 0 
 1: 0 
 
-0 - 0.5
-1 - 0.5
+0 - 1.0
+1 - 0.0
 ----------------------------------------
 
 ########## Testcase 11: Failed ##########
@@ -367,31 +267,7 @@ Expected Output:
 0
 
 Your Output: 
-12 vertices, 22 edges 
-0: 1 1 1 
-1: 0 
-2: 0 
-3: 0 0 0 0 0 0 0 0 0 
-4: 0 
-5: 0 
-6: 0 
-7: 0 
-8: 0 
-9: 0 
-10: 0 
-11: 0 
-
-0 - 0.9166666666666671
-1 - 0.9166666666666671
-2 - 0.0
-3 - 0.0
-4 - 0.0
-5 - 0.0
-6 - 0.0
-7 - 0.0
-8 - 0.0
-9 - 0.0
-10 - 0.0
-11 - 0.0
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 2
+	at Solution.main(Solution.java:101)
 ----------------------------------------
 
