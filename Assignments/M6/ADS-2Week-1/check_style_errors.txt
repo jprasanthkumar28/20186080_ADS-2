@@ -311,6 +311,7 @@ Starting audit...
 [ERROR] M:\ADS-2\Assignments\M6\ADS-2Week-1\Solution.java:89:33: Parameter args should be final. [FinalParameters]
 [ERROR] M:\ADS-2\Assignments\M6\ADS-2Week-1\Solution.java:91: Line is longer than 80 characters (found 81). [LineLength]
 [ERROR] M:\ADS-2\Assignments\M6\ADS-2Week-1\Solution.java:94: Line has trailing spaces. [RegexpSingleline]
+[ERROR] M:\ADS-2\Assignments\M6\ADS-2Week-1\Solution.java:97:20: 'for' is not followed by whitespace. [WhitespaceAround]
 [ERROR] M:\ADS-2\Assignments\M6\ADS-2Week-1\Solution.java:106: Line has trailing spaces. [RegexpSingleline]
 [ERROR] M:\ADS-2\Assignments\M6\ADS-2Week-1\Solution.java:107: Line is longer than 80 characters (found 87). [LineLength]
 [ERROR] M:\ADS-2\Assignments\M6\ADS-2Week-1\Solution.java:113: Line has trailing spaces. [RegexpSingleline]
@@ -319,7 +320,7 @@ Starting audit...
 [ERROR] M:\ADS-2\Assignments\M6\ADS-2Week-1\Solution.java:119: Line has trailing spaces. [RegexpSingleline]
 [ERROR] M:\ADS-2\Assignments\M6\ADS-2Week-1\Solution.java:123: Line has trailing spaces. [RegexpSingleline]
 Audit done.
-Checkstyle ends with 22 errors.
+Checkstyle ends with 23 errors.
 Starting audit...
 [ERROR] M:\ADS-2\Assignments\M6\ADS-2Week-1\Stack.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 [ERROR] M:\ADS-2\Assignments\M6\ADS-2Week-1\Stack.java:13: Line has trailing spaces. [RegexpSingleline]

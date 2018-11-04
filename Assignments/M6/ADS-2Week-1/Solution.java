@@ -94,7 +94,7 @@ public class Solution {
 		// iterate count of vertices times 
 		// to read the adjacency list from std input
 		// and build the graph
-		while (vertices > 0) {
+		for(int i = 0; i < vertices; i++) {
 			String[] tokens = scan.nextLine().split(" ");
 			// System.out.println(Arrays.toString(tokens));
 			for (int j = 1; j < tokens.length; j++) {

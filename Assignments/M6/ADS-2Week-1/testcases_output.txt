@@ -36,9 +36,10 @@ Your Output:
 2: 0 
 3: 2 
 
-Exception in thread "main" java.util.NoSuchElementException: No line found
-	at java.base/java.util.Scanner.nextLine(Unknown Source)
-	at Solution.main(Solution.java:98)
+0 - 0.5
+1 - 0.5
+2 - 0.5
+3 - 0.0
 ----------------------------------------
 
 ########## Testcase 1: Failed ##########
@@ -79,9 +80,10 @@ Your Output:
 2: 0 0 
 3: 0 
 
-Exception in thread "main" java.util.NoSuchElementException: No line found
-	at java.base/java.util.Scanner.nextLine(Unknown Source)
-	at Solution.main(Solution.java:98)
+0 - 0.75
+1 - 0.75
+2 - 0.0
+3 - 0.0
 ----------------------------------------
 
 ########## Testcase 2: Failed ##########
@@ -122,9 +124,10 @@ Your Output:
 2: 0 0 0 
 3: 0 0 
 
-Exception in thread "main" java.util.NoSuchElementException: No line found
-	at java.base/java.util.Scanner.nextLine(Unknown Source)
-	at Solution.main(Solution.java:98)
+0 - 0.75
+1 - 0.75
+2 - 0.0
+3 - 0.0
 ----------------------------------------
 
 ########## Testcase 3: Failed ##########
@@ -229,9 +232,14 @@ Your Output:
 6: 0 
 7: 0 
 
-Exception in thread "main" java.util.NoSuchElementException: No line found
-	at java.base/java.util.Scanner.nextLine(Unknown Source)
-	at Solution.main(Solution.java:98)
+0 - 0.875
+1 - 0.875
+2 - 0.0
+3 - 0.0
+4 - 0.0
+5 - 0.0
+6 - 0.0
+7 - 0.0
 ----------------------------------------
 
 ########## Testcase 4: Failed ##########
@@ -300,9 +308,12 @@ Your Output:
 4: 0 
 5: 
 
-Exception in thread "main" java.util.NoSuchElementException: No line found
-	at java.base/java.util.Scanner.nextLine(Unknown Source)
-	at Solution.main(Solution.java:98)
+0 - 0.6666666666666666
+1 - 0.6666666666666666
+2 - 0.0
+3 - 0.0
+4 - 0.0
+5 - 0.0
 ----------------------------------------
 
 ########## Testcase 5: Failed ##########
@@ -407,9 +418,14 @@ Your Output:
 6: 
 7: 
 
-Exception in thread "main" java.util.NoSuchElementException: No line found
-	at java.base/java.util.Scanner.nextLine(Unknown Source)
-	at Solution.main(Solution.java:98)
+0 - 0.375
+1 - 0.375
+2 - 0.0
+3 - 0.0
+4 - 0.0
+5 - 0.0
+6 - 0.0
+7 - 0.0
 ----------------------------------------
 
 ########## Testcase 6: Failed ##########
@@ -450,9 +466,10 @@ Your Output:
 2: 3 
 3: 0 
 
-Exception in thread "main" java.util.NoSuchElementException: No line found
-	at java.base/java.util.Scanner.nextLine(Unknown Source)
-	at Solution.main(Solution.java:98)
+0 - 0.25
+1 - 0.25
+2 - 0.25
+3 - 0.25
 ----------------------------------------
 
 ########## Testcase 7: Failed ##########
@@ -521,9 +538,12 @@ Your Output:
 4: 0 
 5: 
 
-Exception in thread "main" java.util.NoSuchElementException: No line found
-	at java.base/java.util.Scanner.nextLine(Unknown Source)
-	at Solution.main(Solution.java:98)
+0 - 0.3333333333333333
+1 - 0.3333333333333333
+2 - 0.3333333333333333
+3 - 0.3333333333333333
+4 - 0.0
+5 - 0.0
 ----------------------------------------
 
 ########## Testcase 8: Failed ##########
@@ -564,9 +584,10 @@ Your Output:
 2: 0 0 0 
 3: 0 0 0 
 
-Exception in thread "main" java.util.NoSuchElementException: No line found
-	at java.base/java.util.Scanner.nextLine(Unknown Source)
-	at Solution.main(Solution.java:98)
+0 - 0.75
+1 - 0.75
+2 - 0.0
+3 - 0.0
 ----------------------------------------
 
 ########## Testcase 9: Failed ##########
@@ -635,9 +656,12 @@ Your Output:
 4: 0 
 5: 
 
-Exception in thread "main" java.util.NoSuchElementException: No line found
-	at java.base/java.util.Scanner.nextLine(Unknown Source)
-	at Solution.main(Solution.java:98)
+0 - 0.6666666666666669
+1 - 0.6666666666666669
+2 - 0.0
+3 - 0.0
+4 - 0.0
+5 - 0.0
 ----------------------------------------
 
 ########## Testcase 10: Failed ##########
@@ -658,9 +682,8 @@ Your Output:
 0: 1 
 1: 0 
 
-Exception in thread "main" java.util.NoSuchElementException: No line found
-	at java.base/java.util.Scanner.nextLine(Unknown Source)
-	at Solution.main(Solution.java:98)
+0 - 0.5
+1 - 0.5
 ----------------------------------------
 
 ########## Testcase 11: Failed ##########
@@ -866,78 +889,17 @@ Your Output:
 10: 0 
 11: 0 
 
-12 vertices, 22 edges 
-0: 1 1 1 
-1: 0 
-2: 0 
-3: 0 0 0 0 0 0 0 0 0 
-4: 0 
-5: 0 
-6: 0 
-7: 0 
-8: 0 
-9: 0 
-10: 0 
-11: 0 
-
-12 vertices, 22 edges 
-0: 1 1 1 
-1: 0 
-2: 0 
-3: 0 0 0 0 0 0 0 0 0 
-4: 0 
-5: 0 
-6: 0 
-7: 0 
-8: 0 
-9: 0 
-10: 0 
-11: 0 
-
-12 vertices, 22 edges 
-0: 1 1 1 
-1: 0 
-2: 0 
-3: 0 0 0 0 0 0 0 0 0 
-4: 0 
-5: 0 
-6: 0 
-7: 0 
-8: 0 
-9: 0 
-10: 0 
-11: 0 
-
-12 vertices, 22 edges 
-0: 1 1 1 
-1: 0 
-2: 0 
-3: 0 0 0 0 0 0 0 0 0 
-4: 0 
-5: 0 
-6: 0 
-7: 0 
-8: 0 
-9: 0 
-10: 0 
-11: 0 
-
-12 vertices, 22 edges 
-0: 1 1 1 
-1: 0 
-2: 0 
-3: 0 0 0 0 0 0 0 0 0 
-4: 0 
-5: 0 
-6: 0 
-7: 0 
-8: 0 
-9: 0 
-10: 0 
-11: 0 
-
-Exception in thread "main" java.util.NoSuchElementException: No line found
-	at java.base/java.util.Scanner.nextLine(Unknown Source)
-	at Solution.main(Solution.java:98)
+0 - 0.9166666666666671
+1 - 0.9166666666666671
+2 - 0.0
+3 - 0.0
+4 - 0.0
+5 - 0.0
+6 - 0.0
+7 - 0.0
+8 - 0.0
+9 - 0.0
+10 - 0.0
+11 - 0.0
 ----------------------------------------
 
