@@ -101,8 +101,8 @@ public class Solution {
 				digraph2.addEdge(Integer.parseInt(tokens[0]),
 					Integer.parseInt(tokens[1]));
 			}
-			System.out.println(digraph2.toString());
 		}
+		System.out.println(digraph2.toString());
 		
 		// Create page rank object and pass the graph object to the constructor
 		PageRank p = new PageRank(digraph2);

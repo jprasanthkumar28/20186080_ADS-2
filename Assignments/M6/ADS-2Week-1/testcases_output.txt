@@ -12,24 +12,6 @@ Expected Output:
 3 - 0.0
 
 Your Output: 
-4 vertices, 2 edges 
-0: 1 1 
-1: 
-2: 
-3: 
-
-4 vertices, 3 edges 
-0: 1 1 
-1: 2 
-2: 
-3: 
-
-4 vertices, 4 edges 
-0: 1 1 
-1: 2 
-2: 0 
-3: 
-
 4 vertices, 5 edges 
 0: 1 1 
 1: 2 
@@ -56,24 +38,6 @@ Expected Output:
 3 - 0.09090909090909086
 
 Your Output: 
-4 vertices, 1 edges 
-0: 1 
-1: 
-2: 
-3: 
-
-4 vertices, 3 edges 
-0: 1 
-1: 0 0 
-2: 
-3: 
-
-4 vertices, 5 edges 
-0: 1 
-1: 0 0 
-2: 0 0 
-3: 
-
 4 vertices, 6 edges 
 0: 1 
 1: 0 0 
@@ -100,24 +64,6 @@ Expected Output:
 3 - 0.07692307692307687
 
 Your Output: 
-4 vertices, 1 edges 
-0: 1 
-1: 
-2: 
-3: 
-
-4 vertices, 3 edges 
-0: 1 
-1: 0 0 
-2: 
-3: 
-
-4 vertices, 6 edges 
-0: 1 
-1: 0 0 
-2: 0 0 0 
-3: 
-
 4 vertices, 8 edges 
 0: 1 
 1: 0 0 
@@ -152,76 +98,6 @@ Expected Output:
 7 - 0.02941176470588232
 
 Your Output: 
-8 vertices, 3 edges 
-0: 1 1 1 
-1: 
-2: 
-3: 
-4: 
-5: 
-6: 
-7: 
-
-8 vertices, 4 edges 
-0: 1 1 1 
-1: 0 
-2: 
-3: 
-4: 
-5: 
-6: 
-7: 
-
-8 vertices, 5 edges 
-0: 1 1 1 
-1: 0 
-2: 0 
-3: 
-4: 
-5: 
-6: 
-7: 
-
-8 vertices, 10 edges 
-0: 1 1 1 
-1: 0 
-2: 0 
-3: 0 0 0 0 0 
-4: 
-5: 
-6: 
-7: 
-
-8 vertices, 11 edges 
-0: 1 1 1 
-1: 0 
-2: 0 
-3: 0 0 0 0 0 
-4: 0 
-5: 
-6: 
-7: 
-
-8 vertices, 12 edges 
-0: 1 1 1 
-1: 0 
-2: 0 
-3: 0 0 0 0 0 
-4: 0 
-5: 0 
-6: 
-7: 
-
-8 vertices, 13 edges 
-0: 1 1 1 
-1: 0 
-2: 0 
-3: 0 0 0 0 0 
-4: 0 
-5: 0 
-6: 0 
-7: 
-
 8 vertices, 14 edges 
 0: 1 1 1 
 1: 0 
@@ -260,46 +136,6 @@ Expected Output:
 5 - 0.07936507936507975
 
 Your Output: 
-6 vertices, 3 edges 
-0: 1 1 1 
-1: 
-2: 
-3: 
-4: 
-5: 
-
-6 vertices, 4 edges 
-0: 1 1 1 
-1: 0 
-2: 
-3: 
-4: 
-5: 
-
-6 vertices, 5 edges 
-0: 1 1 1 
-1: 0 
-2: 0 
-3: 
-4: 
-5: 
-
-6 vertices, 7 edges 
-0: 1 1 1 
-1: 0 
-2: 0 
-3: 0 0 
-4: 
-5: 
-
-6 vertices, 8 edges 
-0: 1 1 1 
-1: 0 
-2: 0 
-3: 0 0 
-4: 0 
-5: 
-
 6 vertices, 8 edges 
 0: 1 1 1 
 1: 0 
@@ -338,76 +174,6 @@ Expected Output:
 7 - 0.051470588235294074
 
 Your Output: 
-8 vertices, 3 edges 
-0: 1 1 1 
-1: 
-2: 
-3: 
-4: 
-5: 
-6: 
-7: 
-
-8 vertices, 4 edges 
-0: 1 1 1 
-1: 0 
-2: 
-3: 
-4: 
-5: 
-6: 
-7: 
-
-8 vertices, 5 edges 
-0: 1 1 1 
-1: 0 
-2: 0 
-3: 
-4: 
-5: 
-6: 
-7: 
-
-8 vertices, 10 edges 
-0: 1 1 1 
-1: 0 
-2: 0 
-3: 0 0 0 0 0 
-4: 
-5: 
-6: 
-7: 
-
-8 vertices, 10 edges 
-0: 1 1 1 
-1: 0 
-2: 0 
-3: 0 0 0 0 0 
-4: 
-5: 
-6: 
-7: 
-
-8 vertices, 10 edges 
-0: 1 1 1 
-1: 0 
-2: 0 
-3: 0 0 0 0 0 
-4: 
-5: 
-6: 
-7: 
-
-8 vertices, 10 edges 
-0: 1 1 1 
-1: 0 
-2: 0 
-3: 0 0 0 0 0 
-4: 
-5: 
-6: 
-7: 
-
 8 vertices, 10 edges 
 0: 1 1 1 
 1: 0 
@@ -428,7 +194,7 @@ Your Output:
 7 - 0.0
 ----------------------------------------
 
-########## Testcase 6: Failed ##########
+########## Testcase 6: Passed ##########
 Expected Output: 
 4 vertices, 4 edges 
 0: 1 
@@ -442,24 +208,6 @@ Expected Output:
 3 - 0.25
 
 Your Output: 
-4 vertices, 1 edges 
-0: 1 
-1: 
-2: 
-3: 
-
-4 vertices, 2 edges 
-0: 1 
-1: 2 
-2: 
-3: 
-
-4 vertices, 3 edges 
-0: 1 
-1: 2 
-2: 3 
-3: 
-
 4 vertices, 4 edges 
 0: 1 
 1: 2 
@@ -490,46 +238,6 @@ Expected Output:
 5 - 0.12499999999999999
 
 Your Output: 
-6 vertices, 1 edges 
-0: 1 
-1: 
-2: 
-3: 
-4: 
-5: 
-
-6 vertices, 2 edges 
-0: 1 
-1: 2 
-2: 
-3: 
-4: 
-5: 
-
-6 vertices, 3 edges 
-0: 1 
-1: 2 
-2: 3 
-3: 
-4: 
-5: 
-
-6 vertices, 5 edges 
-0: 1 
-1: 2 
-2: 3 
-3: 0 0 
-4: 
-5: 
-
-6 vertices, 6 edges 
-0: 1 
-1: 2 
-2: 3 
-3: 0 0 
-4: 0 
-5: 
-
 6 vertices, 6 edges 
 0: 1 
 1: 2 
@@ -560,24 +268,6 @@ Expected Output:
 3 - 0.25
 
 Your Output: 
-4 vertices, 3 edges 
-0: 1 1 1 
-1: 
-2: 
-3: 
-
-4 vertices, 6 edges 
-0: 1 1 1 
-1: 0 0 0 
-2: 
-3: 
-
-4 vertices, 9 edges 
-0: 1 1 1 
-1: 0 0 0 
-2: 0 0 0 
-3: 
-
 4 vertices, 12 edges 
 0: 1 1 1 
 1: 0 0 0 
@@ -608,46 +298,6 @@ Expected Output:
 5 - 0.060240963855421686
 
 Your Output: 
-6 vertices, 3 edges 
-0: 1 1 1 
-1: 
-2: 
-3: 
-4: 
-5: 
-
-6 vertices, 6 edges 
-0: 1 1 1 
-1: 0 0 0 
-2: 
-3: 
-4: 
-5: 
-
-6 vertices, 10 edges 
-0: 1 1 1 
-1: 0 0 0 
-2: 0 0 0 0 
-3: 
-4: 
-5: 
-
-6 vertices, 13 edges 
-0: 1 1 1 
-1: 0 0 0 
-2: 0 0 0 0 
-3: 0 0 0 
-4: 
-5: 
-
-6 vertices, 14 edges 
-0: 1 1 1 
-1: 0 0 0 
-2: 0 0 0 0 
-3: 0 0 0 
-4: 0 
-5: 
-
 6 vertices, 14 edges 
 0: 1 1 1 
 1: 0 0 0 
@@ -664,7 +314,7 @@ Your Output:
 5 - 0.0
 ----------------------------------------
 
-########## Testcase 10: Failed ##########
+########## Testcase 10: Passed ##########
 Expected Output: 
 2 vertices, 2 edges 
 0: 1 
@@ -674,10 +324,6 @@ Expected Output:
 1 - 0.5
 
 Your Output: 
-2 vertices, 1 edges 
-0: 1 
-1: 
-
 2 vertices, 2 edges 
 0: 1 
 1: 0 
@@ -721,160 +367,6 @@ Expected Output:
 0
 
 Your Output: 
-12 vertices, 3 edges 
-0: 1 1 1 
-1: 
-2: 
-3: 
-4: 
-5: 
-6: 
-7: 
-8: 
-9: 
-10: 
-11: 
-
-12 vertices, 4 edges 
-0: 1 1 1 
-1: 0 
-2: 
-3: 
-4: 
-5: 
-6: 
-7: 
-8: 
-9: 
-10: 
-11: 
-
-12 vertices, 5 edges 
-0: 1 1 1 
-1: 0 
-2: 0 
-3: 
-4: 
-5: 
-6: 
-7: 
-8: 
-9: 
-10: 
-11: 
-
-12 vertices, 14 edges 
-0: 1 1 1 
-1: 0 
-2: 0 
-3: 0 0 0 0 0 0 0 0 0 
-4: 
-5: 
-6: 
-7: 
-8: 
-9: 
-10: 
-11: 
-
-12 vertices, 15 edges 
-0: 1 1 1 
-1: 0 
-2: 0 
-3: 0 0 0 0 0 0 0 0 0 
-4: 0 
-5: 
-6: 
-7: 
-8: 
-9: 
-10: 
-11: 
-
-12 vertices, 16 edges 
-0: 1 1 1 
-1: 0 
-2: 0 
-3: 0 0 0 0 0 0 0 0 0 
-4: 0 
-5: 0 
-6: 
-7: 
-8: 
-9: 
-10: 
-11: 
-
-12 vertices, 17 edges 
-0: 1 1 1 
-1: 0 
-2: 0 
-3: 0 0 0 0 0 0 0 0 0 
-4: 0 
-5: 0 
-6: 0 
-7: 
-8: 
-9: 
-10: 
-11: 
-
-12 vertices, 18 edges 
-0: 1 1 1 
-1: 0 
-2: 0 
-3: 0 0 0 0 0 0 0 0 0 
-4: 0 
-5: 0 
-6: 0 
-7: 0 
-8: 
-9: 
-10: 
-11: 
-
-12 vertices, 19 edges 
-0: 1 1 1 
-1: 0 
-2: 0 
-3: 0 0 0 0 0 0 0 0 0 
-4: 0 
-5: 0 
-6: 0 
-7: 0 
-8: 0 
-9: 
-10: 
-11: 
-
-12 vertices, 20 edges 
-0: 1 1 1 
-1: 0 
-2: 0 
-3: 0 0 0 0 0 0 0 0 0 
-4: 0 
-5: 0 
-6: 0 
-7: 0 
-8: 0 
-9: 0 
-10: 
-11: 
-
-12 vertices, 21 edges 
-0: 1 1 1 
-1: 0 
-2: 0 
-3: 0 0 0 0 0 0 0 0 0 
-4: 0 
-5: 0 
-6: 0 
-7: 0 
-8: 0 
-9: 0 
-10: 0 
-11: 
-
 12 vertices, 22 edges 
 0: 1 1 1 
 1: 0 
