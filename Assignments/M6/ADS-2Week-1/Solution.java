@@ -90,7 +90,7 @@ public class Solution {
 		Scanner scan = new Scanner(System.in);
 		// read the first line of the input to get the number of vertices
 		int vertices = Integer.parseInt(scan.nextLine());
-		Digraph digraph = new Digraph(vertices);
+		Digraph digraph2 = new Digraph(vertices);
 		// iterate count of vertices times 
 		// to read the adjacency list from std input
 		// and build the graph
@@ -98,14 +98,14 @@ public class Solution {
 			String[] tokens = scan.nextLine().split(" ");
 			// System.out.println(Arrays.toString(tokens));
 			for (int j = 1; j < tokens.length; j++) {
-				digraph.addEdge(Integer.parseInt(tokens[0]),
+				digraph2.addEdge(Integer.parseInt(tokens[0]),
 					Integer.parseInt(tokens[1]));
 			}
-			System.out.println(digraph.toString());
+			System.out.println(digraph2.toString());
 		}
 		
 		// Create page rank object and pass the graph object to the constructor
-		PageRank p = new PageRank(digraph);
+		PageRank p = new PageRank(digraph2);
 		// print the page rank object
 		// p.toString();
 		System.out.println(p);
