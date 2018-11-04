@@ -99,7 +99,7 @@ public class Solution {
 			// System.out.println(Arrays.toString(tokens));
 			for (int j = 1; j < tokens.length; j++) {
 				digraph2.addEdge(Integer.parseInt(tokens[0]),
-					Integer.parseInt(tokens[i]));
+					Integer.parseInt(tokens[j]));
 			}
 		}
 		System.out.println(digraph2.toString());
