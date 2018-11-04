@@ -26,8 +26,8 @@ class PageRank {
 	 * @param      digraph1  The digraph 1
 	 */
 	PageRank(final Digraph digraph1) {
-		this.digraph = digraph1;
-		pageranks = new double[digraph.vertices()];
+		digraph = digraph1;
+		pageranks = new double[digraph1.vertices()];
 	}
 	/**
 	 * Gets the pr.
