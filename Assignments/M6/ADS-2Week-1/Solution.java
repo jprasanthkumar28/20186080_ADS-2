@@ -56,8 +56,9 @@ class PageRank {
 		}
 		reverseDigraph = digraph.reverse();
 		for (int i = 0; i < pageranks.length; i++) {
-			pageranks[i] = 1 / (double)vertices;
+			pageranks[i] = 1 / (double)digraph.vertices();
 		}
+		// System.out.println(Arrays.toString(pageranks));
 		double[] tempArray = new double[digraph.vertices()];
 		for (int i = 0; i < 1000; i++) {
 			//Iterate it for every node
