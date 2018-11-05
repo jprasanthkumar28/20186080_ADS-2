@@ -297,14 +297,8 @@ Starting audit...
 Audit done.
 Starting audit...
 [ERROR] M:\ADS-2\Assignments\M6\ADS-2Week-1\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] M:\ADS-2\Assignments\M6\ADS-2Week-1\Solution.java:13:1: File contains tab characters (this is the first instance). [FileTabCharacter]
-[ERROR] M:\ADS-2\Assignments\M6\ADS-2Week-1\Solution.java:24:18: Variable 'pageranks' must be private and have accessor methods. [VisibilityModifier]
-[ERROR] M:\ADS-2\Assignments\M6\ADS-2Week-1\Solution.java:28:16: Variable 'vertices' must be private and have accessor methods. [VisibilityModifier]
-[ERROR] M:\ADS-2\Assignments\M6\ADS-2Week-1\Solution.java:45:29: Parameter v should be final. [FinalParameters]
-[ERROR] M:\ADS-2\Assignments\M6\ADS-2Week-1\Solution.java:71: Line is longer than 80 characters (found 89). [LineLength]
-[ERROR] M:\ADS-2\Assignments\M6\ADS-2Week-1\Solution.java:144: Line is longer than 80 characters (found 85). [LineLength]
 Audit done.
-Checkstyle ends with 7 errors.
+Checkstyle ends with 1 errors.
 Starting audit...
 [ERROR] M:\ADS-2\Assignments\M6\ADS-2Week-1\Stack.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 [ERROR] M:\ADS-2\Assignments\M6\ADS-2Week-1\Stack.java:13: Line has trailing spaces. [RegexpSingleline]
