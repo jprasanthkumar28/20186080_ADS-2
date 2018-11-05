@@ -36,7 +36,7 @@ class PageRank {
 		pageranks = new double[digraph1.vertices()];
 	}
 	/**
-	 * Gets the pr.
+	 * Gets the page Eank.
 	 *
 	 * @param      v     { parameter_description }
 	 *
@@ -44,14 +44,22 @@ class PageRank {
 	 */
 	public double getPR(int v) {
 		// To reverse a diagraph.
-		reverseDigraph = digraph.reverse();
-		vertices = reverseDigraph.vertices();
-		for (int i = 0; i < pageranks.length; i++) {
-			pageranks[i] = 1 / vertices;
-		}
 		//Iterate it for 1000 times.
-
-		for (int i = 1; i < 1000; i++) {
+		for(int i = 0; i < digraph.vertices(); i++) {
+			if(digraph.outdegree(i) == 0) {
+				for(int j = 0; j < digraph.vertices(); j++) {
+					if(i != j) {
+						digraph.addEdge(i, j);
+					}
+				}
+			}
+		}
+		reverseDigraph = digraph.reverse();
+		for (int i = 0; i < pageranks.length; i++) {
+			pageranks[i] = 1 / (double)vertices;
+		}
+		double[] tempArray = new double[digraph.vertices()];
+		for (int i = 0; i < 1000; i++) {
 			//Iterate it for every node
 			for (int j = 0; j < digraph.vertices(); j++) {
 				double temp = 0.0;
@@ -59,8 +67,9 @@ class PageRank {
 				for (int k : reverseDigraph.adj(j)) {
 					temp = temp + pageranks[k] / (double)(digraph.outdegree(k));
 				}
-				pageranks[j] = temp;
+				tempArray[j] = temp;
 			}
+			pageranks = Arrays.copyOf(tempArray, tempArray.length);
 		}
 		return pageranks[v];
 	}
@@ -85,7 +94,6 @@ class PageRank {
 class WebSearch {
 	//Wordnet class.
 }
-
 
 /**
  * Class for solution.
