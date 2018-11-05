@@ -349,9 +349,7 @@ Starting audit...
 Audit done.
 Checkstyle ends with 33 errors.
 Starting audit...
-[ERROR] M:\ADS-2\Assignments\M7\1. MST\Solution.java:6:1: File contains tab characters (this is the first instance). [FileTabCharacter]
 Audit done.
-Checkstyle ends with 1 errors.
 Starting audit...
 [ERROR] M:\ADS-2\Assignments\M7\1. MST\Stack.java:13: Line has trailing spaces. [RegexpSingleline]
 [ERROR] M:\ADS-2\Assignments\M7\1. MST\Stack.java:14: Line has trailing spaces. [RegexpSingleline]
