@@ -1,4 +1,10 @@
+/**
+ * Scanner package.
+ */
 import java.util.Scanner;
+/**
+ * Arrays pacakge..
+ */
 import java.util.Arrays;
 /**
  * Class for page rank.
@@ -73,8 +79,11 @@ class PageRank {
 	}
 }
 
+/**
+ * Class for web search.
+ */
 class WebSearch {
-
+	//Wordnet class.
 }
 
 
