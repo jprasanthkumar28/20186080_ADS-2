@@ -44,6 +44,7 @@ class PageRank {
 			pageranks[i] = 1 / vertices;
 		}
 		//Iterate it for 1000 times.
+
 		for (int i = 1; i < 1000; i++) {
 			//Iterate it for every node
 			for (int j = 0; j < digraph.vertices(); j++) {
@@ -55,7 +56,7 @@ class PageRank {
 				pageranks[j] = temp;
 			}
 		}
-		return pageranks[v];	
+		return pageranks[v];
 	}
     /**
      * Returns a string representation of the object.
