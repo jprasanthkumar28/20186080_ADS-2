@@ -3,7 +3,7 @@ import java.util.HashMap;
 /**
  * Class for solution.
  */
-public class Solution {
+public final class Solution {
     /**
      * Constructs the object.
      */
@@ -37,8 +37,10 @@ public class Solution {
         while (queries > 0) {
             String[] strArray1 = scan.nextLine().split(" ");
             int a = hash.get(strArray1[0]);
-            DijkstraUndirectedSP dijkstra = new DijkstraUndirectedSP(edgeWeightedGraph, a);
-            if (dijkstra.hasPathTo(hash.get(strArray1[1]))) {
+            DijkstraUndirectedSP dijkstra =
+            new DijkstraUndirectedSP(edgeWeightedGraph, a);
+            if (dijkstra.hasPathTo(
+                hash.get(strArray1[1]))) {
                 System.out.println((int) dijkstra.distTo(hash.get(strArray1[1])));
             }
             queries--;

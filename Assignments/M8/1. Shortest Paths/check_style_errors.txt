@@ -109,10 +109,8 @@ Starting audit...
 Audit done.
 Checkstyle ends with 99 errors.
 Starting audit...
-[ERROR] M:\ADS-2\Assignments\M8\1. Shortest Paths\Solution.java:6: Class Solution should be declared as final. [FinalClass]
-[ERROR] M:\ADS-2\Assignments\M8\1. Shortest Paths\Solution.java:40: Line is longer than 80 characters (found 91). [LineLength]
-[ERROR] M:\ADS-2\Assignments\M8\1. Shortest Paths\Solution.java:42: Line is longer than 80 characters (found 82). [LineLength]
+[ERROR] M:\ADS-2\Assignments\M8\1. Shortest Paths\Solution.java:44: Line is longer than 80 characters (found 82). [LineLength]
 Audit done.
-Checkstyle ends with 3 errors.
+Checkstyle ends with 1 errors.
 Starting audit...
 Audit done.
