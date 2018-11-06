@@ -41,7 +41,8 @@ public final class Solution {
             new DijkstraUndirectedSP(edgeWeightedGraph, a);
             if (dijkstra.hasPathTo(
                 hash.get(strArray1[1]))) {
-                System.out.println((int) dijkstra.distTo(hash.get(strArray1[1])));
+                System.out.println((int)
+                    dijkstra.distTo(hash.get(strArray1[1])));
             }
             queries--;
         }
