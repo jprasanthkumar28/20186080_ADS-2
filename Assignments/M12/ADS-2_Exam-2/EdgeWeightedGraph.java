@@ -167,7 +167,7 @@ public class EdgeWeightedGraph {
                 if (e.other(v) > v) {
                     list.add(e);
                 }
-                // add only one copy of each self loop (self loops will be consecutive)
+                // only add one copy of each self loop (self loops will be consecutive)
                 else if (e.other(v) == v) {
                     if (selfLoops % 2 == 0) list.add(e);
                     selfLoops++;
@@ -186,7 +186,7 @@ public class EdgeWeightedGraph {
      */
     public String toString() {
         StringBuilder s = new StringBuilder();
-        s.append(V + " " + E + NEWLINE);
+        s.append(V + " vertices " + E + " edges"+ NEWLINE);
         for (int v = 0; v < V; v++) {
             s.append(v + ": ");
             for (Edge e : adj[v]) {
