@@ -8,6 +8,8 @@ public class Solution {
         int edges = Integer.parseInt(scan.nextLine());
         EdgeWeightedGraph edgeWeight
          = new EdgeWeightedGraph(vertices);
+        EdgeWeightedDigraph edgeWeightDi
+         = new EdgeWeightedDigraph(vertices);
         for (int i = 0; i < edges; i++) {
             String[] tokens = scan.nextLine().split(" ");
             Edge edge = new Edge(Integer.parseInt(tokens[0]),
@@ -49,10 +51,10 @@ public class Solution {
 			String[] strArray1 = scan.nextLine().split(" ");
 			int data = 0;
 			// DijkstraAllPairsSP dj = new DijkstraAllPairsSP(edgeWeight);
-       		dijkstra = new DijkstraUndirectedSP(edgeWeight, Integer.parseInt(strArray1[0]));
+       		DijkstraAllPairsSP dijkstra1 = new DijkstraAllPairsSP(edgeWeightDi);
             	// System.out.println("Hi");
-            if (dijkstra.hasPathTo(Integer.parseInt(strArray1[2]))) {
-            	System.out.println(dijkstra.distTo(Integer.parseInt(strArray1[1])));
+            if (dijkstra1.hasPath(Integer.parseInt(strArray1[0]), Integer.parseInt(strArray1[2]))) {
+            	System.out.println(dijkstra1.dist(Integer.parseInt(strArray1[0]), Integer.parseInt(strArray1[1])));
             } else {
          		System.out.println("No Path Found.");
             }

@@ -1,35 +1,3 @@
-/******************************************************************************
- *  Compilation:  javac DijkstraAllPairsSP.java
- *  Execution:    none
- *  Dependencies: EdgeWeightedDigraph.java Dijkstra.java
- *
- *  Dijkstra's algorithm run from each vertex. 
- *  Takes time proportional to E V log V and space proportional to EV.
- *
- ******************************************************************************/
-
-package edu.princeton.cs.algs4;
-
-/**
- *  The {@code DijkstraAllPairsSP} class represents a data type for solving the
- *  all-pairs shortest paths problem in edge-weighted digraphs
- *  where the edge weights are nonnegative.
- *  <p>
- *  This implementation runs Dijkstra's algorithm from each vertex.
- *  The constructor takes time proportional to <em>V</em> (<em>E</em> log <em>V</em>)
- *  and uses space proprtional to <em>V</em><sup>2</sup>,
- *  where <em>V</em> is the number of vertices and <em>E</em> is the number of edges.
- *  Afterwards, the {@code dist()} and {@code hasPath()} methods take
- *  constant time and the {@code path()} method takes time proportional to the
- *  number of edges in the shortest path returned.
- *  <p>
- *  For additional documentation,    
- *  see <a href="http://algs4.cs.princeton.edu/44sp">Section 4.4</a> of    
- *  <i>Algorithms, 4th Edition</i> by Robert Sedgewick and Kevin Wayne. 
- *
- *  @author Robert Sedgewick
- *  @author Kevin Wayne
- */
 public class DijkstraAllPairsSP {
     private DijkstraSP[] all;
 
