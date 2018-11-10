@@ -51,8 +51,8 @@ public class Solution {
 			// DijkstraAllPairsSP dj = new DijkstraAllPairsSP(edgeWeight);
        		dijkstra = new DijkstraUndirectedSP(edgeWeight, Integer.parseInt(strArray1[0]));
             	// System.out.println("Hi");
-            if (dijkstra.hasPathTo(Integer.parseInt(strArray1[1]))) {
-            	System.out.println(dijkstra.distTo(Integer.parseInt(strArray1[2])));
+            if (dijkstra.hasPathTo(Integer.parseInt(strArray1[2]))) {
+            	System.out.println(dijkstra.distTo(Integer.parseInt(strArray1[1])));
             } else {
          		System.out.println("No Path Found.");
             }
