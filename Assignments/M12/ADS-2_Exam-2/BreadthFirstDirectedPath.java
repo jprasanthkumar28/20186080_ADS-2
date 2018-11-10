@@ -8,6 +8,7 @@ public class Solution {
         int edges = Integer.parseInt(scan.nextLine());
         EdgeWeightedGraph edgeWeight
          = new EdgeWeightedGraph(vertices);
+	 	BreadthFirstDirectedPaths bfs = new BreadthFirstDirectedPaths(edgeWeight, vertices);
         for (int i = 0; i < edges; i++) {
             String[] tokens = scan.nextLine().split(" ");
             Edge edge = new Edge(Integer.parseInt(tokens[0]),
@@ -29,18 +30,13 @@ public class Solution {
 			break;
 
 		case "DirectedPaths":
-			String[] strArray = scan.nextLine().split(" ");
-   			// System.out.println(Arrays.toString(strArray));
-   			// int a = hash.get(strArray[0]);
-       		DijkstraUndirectedSP dijkstra =
-            new DijkstraUndirectedSP(edgeWeight, Integer.parseInt(strArray[0]));
-            	// System.out.println("Hi");
-            if (dijkstra.hasPathTo(Integer.parseInt(strArray[1]))) {
-            	System.out.println(dijkstra.distTo(Integer.parseInt(strArray[1])));
-                // System.out.println((int)dijkstra.distTo(hash.get(strArray[1])));
-            } else {
-         		System.out.println("No Path Found.");
-            }
+       //      KruskalMST krushkal = new KruskalMST(edgeWeight);
+       //   if (edgeWeight.hasEdge(vertices, edges)) {
+	     	// System.out.printf("%.5f\n", krushkal.weight());
+       //   } else {
+       //   	System.out.println("No Path Found");
+       //   }
+         	System.out.println("No Path Found.");
          
 			// Handle the case of DirectedPaths, where two integers are given.
 			// First is the source and second is the destination.
