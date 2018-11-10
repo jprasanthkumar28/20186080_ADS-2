@@ -31,26 +31,29 @@ public class Solution {
 		case "DirectedPaths":
 			String[] strArray = scan.nextLine().split(" ");
    			// System.out.println(Arrays.toString(strArray));
-   			// int a = hash.get(strArray[0]);
        		DijkstraUndirectedSP dijkstra =
             new DijkstraUndirectedSP(edgeWeight, Integer.parseInt(strArray[0]));
             	// System.out.println("Hi");
             if (dijkstra.hasPathTo(Integer.parseInt(strArray[1]))) {
             	System.out.println(dijkstra.distTo(Integer.parseInt(strArray[1])));
-                // System.out.println((int)dijkstra.distTo(hash.get(strArray[1])));
             } else {
          		System.out.println("No Path Found.");
             }
-         
 			// Handle the case of DirectedPaths, where two integers are given.
 			// First is the source and second is the destination.
 			// If the path exists print the distance between them.
 			// Other wise print "No Path Found."
-			
 			break;
 
 		case "ViaPaths":
-         	System.out.println("No Path Found.");
+			String[] strArray1 = scan.nextLine().split(" ");
+       		dijkstra = new DijkstraUndirectedSP(edgeWeight, Integer.parseInt(strArray1[0]));
+            	// System.out.println("Hi");
+            if (dijkstra.hasPathTo(Integer.parseInt(strArray1[2]))) {
+            	System.out.println(dijkstra.distTo(Integer.parseInt(strArray1[1])));
+            } else {
+         		System.out.println("No Path Found.");
+            }
 			// Handle the case of ViaPaths, where three integers are given.
 			// First is the source and second is the via is the one where path should pass throuh.
 			// third is the destination.
