@@ -49,12 +49,14 @@ public class Solution {
 
 		case "ViaPaths":
 			String[] strArray1 = scan.nextLine().split(" ");
-			int data = 0;
-			// DijkstraAllPairsSP dj = new DijkstraAllPairsSP(edgeWeight);
-       		DijkstraAllPairsSP dijkstra1 = new DijkstraAllPairsSP(edgeWeightDi);
+       		dijkstra = new DijkstraUndirectedSP(edgeWeight, Integer.parseInt(strArray1[1]));
             	// System.out.println("Hi");
-            if (dijkstra1.hasPath(Integer.parseInt(strArray1[0]), Integer.parseInt(strArray1[2]))) {
-            	System.out.println(dijkstra1.dist(Integer.parseInt(strArray1[0]), Integer.parseInt(strArray1[1])));
+            if (dijkstra.hasPathTo(Integer.parseInt(strArray1[2]))) {
+            	double data = dijkstra.distTo(Integer.parseInt(strArray1[0]));
+            	String str = " ";
+            	str = strArray1[0] + " " + strArray1[1];
+            	System.out.println(data);
+            	System.out.println(str);
             } else {
          		System.out.println("No Path Found.");
             }

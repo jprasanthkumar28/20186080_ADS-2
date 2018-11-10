@@ -276,11 +276,8 @@ Starting audit...
 [ERROR] M:\ADS-2\Assignments\M12\ADS-2_Exam-2\Solution.java:5:33: Parameter args should be final. [FinalParameters]
 [ERROR] M:\ADS-2\Assignments\M12\ADS-2_Exam-2\Solution.java:40: Line is longer than 80 characters (found 83). [LineLength]
 [ERROR] M:\ADS-2\Assignments\M12\ADS-2_Exam-2\Solution.java:44: Line is longer than 80 characters (found 90). [LineLength]
-[ERROR] M:\ADS-2\Assignments\M12\ADS-2_Exam-2\Solution.java:53: Line is longer than 80 characters (found 86). [LineLength]
-[ERROR] M:\ADS-2\Assignments\M12\ADS-2_Exam-2\Solution.java:54: Line is longer than 80 characters (found 84). [LineLength]
-[ERROR] M:\ADS-2\Assignments\M12\ADS-2_Exam-2\Solution.java:56: Line is longer than 80 characters (found 100). [LineLength]
-[ERROR] M:\ADS-2\Assignments\M12\ADS-2_Exam-2\Solution.java:57: Line is longer than 80 characters (found 115). [LineLength]
-[ERROR] M:\ADS-2\Assignments\M12\ADS-2_Exam-2\Solution.java:61: Line is longer than 80 characters (found 87). [LineLength]
-[ERROR] M:\ADS-2\Assignments\M12\ADS-2_Exam-2\Solution.java:62: Line is longer than 80 characters (found 110). [LineLength]
+[ERROR] M:\ADS-2\Assignments\M12\ADS-2_Exam-2\Solution.java:52: Line is longer than 80 characters (found 96). [LineLength]
+[ERROR] M:\ADS-2\Assignments\M12\ADS-2_Exam-2\Solution.java:63: Line is longer than 80 characters (found 87). [LineLength]
+[ERROR] M:\ADS-2\Assignments\M12\ADS-2_Exam-2\Solution.java:64: Line is longer than 80 characters (found 110). [LineLength]
 Audit done.
-Checkstyle ends with 15 errors.
+Checkstyle ends with 12 errors.
