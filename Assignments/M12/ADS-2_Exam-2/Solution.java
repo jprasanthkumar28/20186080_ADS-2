@@ -20,6 +20,7 @@ public class Solution {
 		// Parallel Edges are allowed...
 		// Take the Graph input here...
         String caseToGo = scan.nextLine();
+        // System.out.println(caseToGo);
 		// String caseToGo = null;
 		switch (caseToGo) {
 		case "Graph":
