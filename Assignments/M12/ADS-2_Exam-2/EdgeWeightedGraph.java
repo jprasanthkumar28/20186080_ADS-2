@@ -20,6 +20,22 @@ public class EdgeWeightedGraph {
             adj[v] = new Bag<Edge>();
         }
     }
+    /**
+     * Determines if it has edge.
+     *
+     * @param      v     { parameter_description }
+     * @param      w     { parameter_description }
+     *
+     * @return     True if has edge, False otherwise.
+     */
+    // public boolean hasEdge(int v, int e) {
+    //     for (int each : adj[e]) {
+    //         if (each == v) {
+    //             return true;
+    //         }
+    //     }
+    //     return false;
+    // }
 
     /**
      * Initializes a random edge-weighted graph with {@code V} vertices and <em>E</em> edges.
