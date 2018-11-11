@@ -222,13 +222,7 @@ Starting audit...
 Audit done.
 Checkstyle ends with 43 errors.
 Starting audit...
-[ERROR] M:\ADS-2\Assignments\M10\Seam Carving\SeamCarver.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] M:\ADS-2\Assignments\M10\Seam Carving\SeamCarver.java:18:8: Unused @param tag for 'picture'. [JavadocMethod]
-[ERROR] M:\ADS-2\Assignments\M10\Seam Carving\SeamCarver.java:20:37: Expected @param tag for 'picture1'. [JavadocMethod]
-[ERROR] M:\ADS-2\Assignments\M10\Seam Carving\SeamCarver.java:270: Line has trailing spaces. [RegexpSingleline]
-[ERROR] M:\ADS-2\Assignments\M10\Seam Carving\SeamCarver.java:287:13: File contains tab characters (this is the first instance). [FileTabCharacter]
 Audit done.
-Checkstyle ends with 5 errors.
 Starting audit...
 [ERROR] M:\ADS-2\Assignments\M10\Seam Carving\ShowEnergy.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 [ERROR] M:\ADS-2\Assignments\M10\Seam Carving\ShowEnergy.java:5: Line has trailing spaces. [RegexpSingleline]

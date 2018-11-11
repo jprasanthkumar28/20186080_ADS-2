@@ -15,7 +15,7 @@ public class SeamCarver {
     /**
      * Constructs the object.
      *
-     * @param      picture  The picture
+     * @param      picture1  The picture
      */
     public SeamCarver(final Picture picture1) {
         if (picture1 == null) {
@@ -267,7 +267,6 @@ public class SeamCarver {
     /**
      * Determines if valid.
      * // return false if two consecutive entries differ by more than 1
-     * 
      *
      * @param      a      { parameter_description }
      * @param      len    The length
@@ -284,7 +283,7 @@ public class SeamCarver {
         }
         for (int i = 1; i < len; i++) {
             if (a[i] < Math.max(0, a[i - 1] - 1)
-            	|| a[i] > Math.min(range, a[i - 1] + 1)) {
+                || a[i] > Math.min(range, a[i - 1] + 1)) {
                 return false;
             }
         }
