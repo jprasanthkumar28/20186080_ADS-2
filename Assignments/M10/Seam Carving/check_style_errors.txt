@@ -223,14 +223,12 @@ Audit done.
 Checkstyle ends with 43 errors.
 Starting audit...
 [ERROR] M:\ADS-2\Assignments\M10\Seam Carving\SeamCarver.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] M:\ADS-2\Assignments\M10\Seam Carving\SeamCarver.java:20:37: 'picture' hides a field. [HiddenField]
-[ERROR] M:\ADS-2\Assignments\M10\Seam Carving\SeamCarver.java:67: Line is longer than 80 characters (found 85). [LineLength]
-[ERROR] M:\ADS-2\Assignments\M10\Seam Carving\SeamCarver.java:75: First sentence should end with a period. [JavadocStyle]
-[ERROR] M:\ADS-2\Assignments\M10\Seam Carving\SeamCarver.java:268:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] M:\ADS-2\Assignments\M10\Seam Carving\SeamCarver.java:276: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] M:\ADS-2\Assignments\M10\Seam Carving\SeamCarver.java:276:50: '||' should be on a new line. [OperatorWrap]
+[ERROR] M:\ADS-2\Assignments\M10\Seam Carving\SeamCarver.java:18:8: Unused @param tag for 'picture'. [JavadocMethod]
+[ERROR] M:\ADS-2\Assignments\M10\Seam Carving\SeamCarver.java:20:37: Expected @param tag for 'picture1'. [JavadocMethod]
+[ERROR] M:\ADS-2\Assignments\M10\Seam Carving\SeamCarver.java:270: Line has trailing spaces. [RegexpSingleline]
+[ERROR] M:\ADS-2\Assignments\M10\Seam Carving\SeamCarver.java:287:13: File contains tab characters (this is the first instance). [FileTabCharacter]
 Audit done.
-Checkstyle ends with 7 errors.
+Checkstyle ends with 5 errors.
 Starting audit...
 [ERROR] M:\ADS-2\Assignments\M10\Seam Carving\ShowEnergy.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 [ERROR] M:\ADS-2\Assignments\M10\Seam Carving\ShowEnergy.java:5: Line has trailing spaces. [RegexpSingleline]
@@ -260,9 +258,7 @@ Starting audit...
 Audit done.
 Checkstyle ends with 13 errors.
 Starting audit...
-[ERROR] M:\ADS-2\Assignments\M10\Seam Carving\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 Audit done.
-Checkstyle ends with 1 errors.
 Starting audit...
 [ERROR] M:\ADS-2\Assignments\M10\Seam Carving\StdOut.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 [ERROR] M:\ADS-2\Assignments\M10\Seam Carving\StdOut.java:16: Line is longer than 80 characters (found 84). [LineLength]
