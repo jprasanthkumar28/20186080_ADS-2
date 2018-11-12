@@ -1,0 +1,14 @@
+Starting audit...
+[ERROR] M:\ADS-2\Assignments\M13\Radix Sorts\LSD.java:24:13: Name 'R' must match pattern '^[a-z][a-zA-Z0-9]*$'. [LocalVariableName]
+[ERROR] M:\ADS-2\Assignments\M13\Radix Sorts\LSD.java:24:17: '256' is a magic number. [MagicNumber]
+[ERROR] M:\ADS-2\Assignments\M13\Radix Sorts\LSD.java:32: 'for' construct must use '{}'s. [NeedBraces]
+[ERROR] M:\ADS-2\Assignments\M13\Radix Sorts\LSD.java:36: 'for' construct must use '{}'s. [NeedBraces]
+[ERROR] M:\ADS-2\Assignments\M13\Radix Sorts\LSD.java:40: 'for' construct must use '{}'s. [NeedBraces]
+[ERROR] M:\ADS-2\Assignments\M13\Radix Sorts\LSD.java:44: 'for' construct must use '{}'s. [NeedBraces]
+[ERROR] M:\ADS-2\Assignments\M13\Radix Sorts\LSD.java:56:19: Name 'BITS' must match pattern '^[a-z][a-zA-Z0-9]*$'. [LocalFinalVariableName]
+[ERROR] M:\ADS-2\Assignments\M13\Radix Sorts\LSD.java:57:19: Name 'R' must match pattern '^[a-z][a-zA-Z0-9]*$'. [LocalFinalVariableName]
+[ERROR] M:\ADS-2\Assignments\M13\Radix Sorts\LSD.java:58:19: Name 'MASK' must match pattern '^[a-z][a-zA-Z0-9]*$'. [LocalFinalVariableName]
+Audit done.
+Checkstyle ends with 9 errors.
+Starting audit...
+Audit done.
