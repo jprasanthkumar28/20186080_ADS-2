@@ -111,7 +111,7 @@ public class TST<Value> {
         } else {
             return x;
         }
-    }           
+    }
 
     /**
      * Inserts the key-value pair symbol table, overwriting the old value.
@@ -142,7 +142,7 @@ public class TST<Value> {
      * @return     { description_of_the_return_value }
      */
     private Node<Value> put(final Node<Value> x, final String key,
-                                final Value val, final int d) {
+                            final Value val, final int d) {
         char c = key.charAt(d);
         Node<Value> x1 = x;
         if (x1 == null) {
@@ -167,10 +167,10 @@ public class TST<Value> {
      * or {@code null}, if no such string.
      * @param query the query string
      * @return the string in the symbol table that is the longest
-     * prefix of {@ code query},
-     *     <object></object>r {@code null} if no such string
-     * @    throws IllegalArgumentException if {@code query} is {@code null}
-     */ 
+     * prefix of {@code query},
+     *     or {@code null} if no such string
+     * @throws IllegalArgumentException if {@code query} is {@code null}
+     */
     public String longestPrefixOf(final String query) {
         if (query == null) {
             throw new IllegalArgumentException(
@@ -189,7 +189,7 @@ public class TST<Value> {
             } else if (c > x.c) {
                 x = x.right;
             } else {
-                 i++;
+                i++;
                 if (x.val != null) {
                     length = i;
                 }
@@ -200,7 +200,7 @@ public class TST<Value> {
     }
 
     /**
-     * <RP></RP>eturns all keys in the symbol table as an {@code Iterable}.
+     * Returns all keys in the symbol table as an {@code Iterable}.
      * To iterate over all of the keys in the symbol table named {@code st},
      * use the foreach notation: {@code for (Key key : st.keys())}.
      * @return all keys in the symbol table as an {@code Iterable}
@@ -217,7 +217,7 @@ public class TST<Value> {
      * @return all of the keys in the set that start with {@code prefix},
      *     as an iterable
      * @throws IllegalArgumentException if {@code prefix} is {@code null}
-     */ 
+     */
     public Iterable<String> keysWithPrefix(final String prefix) {
         if (prefix == null) {
             throw new IllegalArgumentException(
@@ -238,7 +238,7 @@ public class TST<Value> {
      * { function_description }.
      *
      * @param      x       { parameter_description }
-     * @    param      prefix  The prefix
+     * @param      prefix  The prefix
      * @param      queue   The queue
      */
     private void collect(final Node<Value> x, final StringBuilder prefix,
@@ -255,7 +255,7 @@ public class TST<Value> {
         collect(x.right, prefix, queue);
     }
     /**
-         * { function_description }.
+     * { function_description }.
      *
      * @param      x        { parameter_description }
      * @param      prefix   The prefix
@@ -270,7 +270,7 @@ public class TST<Value> {
         }
         char c = pattern.charAt(i);
         if (c == '.' || c < x.c) {
-                collect(x.left, prefix, i, pattern, queue);
+            collect(x.left, prefix, i, pattern, queue);
         }
         if (c == '.' || c == x.c) {
             if (i == pattern.length() - 1 && x.val != null) {

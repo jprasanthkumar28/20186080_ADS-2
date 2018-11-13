@@ -6,18 +6,18 @@ import java.util.Scanner;
  * class for Solution.
  */
 public final class Solution {
-	/**
-	 * Constructs the object.
-	 */
-	private Solution() {
-		//Empty Constructer.
-	}
-	/**
-	 * client function. 
-	 *
-	 * @param      args  The arguments
-	 */
-	public static void main(final String[] args) {
+    /**
+     * Constructs the object.
+     */
+    private Solution() {
+        //Empty Constructer.
+    }
+    /**
+     * client function.
+     *
+     * @param      args  The arguments
+     */
+    public static void main(final String[] args) {
         String[] words = loadWords();
         //Your code goes here...
         TST<Integer> tst = new TST<Integer>();

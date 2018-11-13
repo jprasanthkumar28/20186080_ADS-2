@@ -2,18 +2,9 @@ Starting audit...
 Audit done.
 Starting audit...
 [ERROR] M:\ADS-2\Assignments\M14\Assignment-1\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] M:\ADS-2\Assignments\M14\Assignment-1\Solution.java:9:1: File contains tab characters (this is the first instance). [FileTabCharacter]
-[ERROR] M:\ADS-2\Assignments\M14\Assignment-1\Solution.java:16: Line has trailing spaces. [RegexpSingleline]
 Audit done.
-Checkstyle ends with 3 errors.
+Checkstyle ends with 1 errors.
 Starting audit...
 Audit done.
 Starting audit...
-[ERROR] M:\ADS-2\Assignments\M14\Assignment-1\TST.java:114: Line has trailing spaces. [RegexpSingleline]
-[ERROR] M:\ADS-2\Assignments\M14\Assignment-1\TST.java:171:20: Extra HTML tag found: </object>r {@code null} if no such string [JavadocStyle]
-[ERROR] M:\ADS-2\Assignments\M14\Assignment-1\TST.java:173: Line has trailing spaces. [RegexpSingleline]
-[ERROR] M:\ADS-2\Assignments\M14\Assignment-1\TST.java:203:12: Extra HTML tag found: </RP>eturns all keys in the symbol table as an {@code Iterab [JavadocStyle]
-[ERROR] M:\ADS-2\Assignments\M14\Assignment-1\TST.java:220: Line has trailing spaces. [RegexpSingleline]
-[ERROR] M:\ADS-2\Assignments\M14\Assignment-1\TST.java:244:67: Expected @param tag for 'prefix'. [JavadocMethod]
 Audit done.
-Checkstyle ends with 6 errors.
