@@ -1,3 +1,6 @@
+/**
+ * { item_description }.
+ */
 import java.util.Arrays;
 /**
  * Class for suffix array.
@@ -11,7 +14,7 @@ public class SuffixArray {
     /**
      * Initializes a suffix array for the given {@code text} string.
      * @param text the input string
-     */ 
+     */
     public SuffixArray(final String text) {
         int n = text.length();
         this.suffixes = new Suffix[n];
@@ -25,7 +28,7 @@ public class SuffixArray {
      */
     private static final class Suffix implements Comparable<Suffix> {
         /**
-         * { var_description }. 
+         * { var_description }.
          */
         private final String text;
         /**
@@ -69,12 +72,12 @@ public class SuffixArray {
          */
         public int compareTo(final Suffix that) {
             if (this == that) {     // optimization
-                return 0;   
+                return 0;
             }
             int n = Math.min(this.length(), that.length());
             for (int i = 0; i < n; i++) {
                 if (this.charAt(i) < that.charAt(i)) {
-                    return -1;  
+                    return -1;
                 }
                 if (this.charAt(i) > that.charAt(i)) {
                     return +1;
@@ -181,7 +184,7 @@ public class SuffixArray {
         }
         return lo;
     }
-    /**     
+    /**
      * { function_description }.
      *
      * @param      query   The query
