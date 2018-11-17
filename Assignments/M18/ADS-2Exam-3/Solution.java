@@ -101,7 +101,8 @@ public class Solution {
 }
 
 class T9 {
-	TST tst = new TST<Integer>();
+	final TST<Integer> tst;
+	// TST tst = new TST<Integer>();
 	public T9(BinarySearchST<String, Integer> st) {
 		// your code goes here
 		tst = new TST<Integer>();
@@ -128,7 +129,23 @@ class T9 {
 	// return all possibilities(words), find top k with highest frequency.
 	public Iterable<String> getSuggestions(Iterable<String> words, int k) {
 		// your code goes here
-		return null;
+		BinarySearchST<Integer, String>  bst = new BinarySearchST<Integer, String>();
+		for (String str : words) {
+			Integer fre = tst.get(str);
+			bst.put(fre, str);
+		}
+		Bag<String> bag = new Bag<String>();
+		String[] array = new String[k];
+		for (int j =0; j < k ;j++ ) {
+			Integer i = bst.max();
+			array[j] = bst.get(i);
+			bst.deleteMax();
+		}
+		Arrays.sort(array);
+		for (int m = k; m > 0 ;m--) {
+			bag.add(array[m-1]);
+		}
+		return bag;
 	}
 
 	// final output
